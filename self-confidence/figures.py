@@ -117,25 +117,36 @@ save(fig, "fig1.png")
 # Stated confidence when the self-prediction was right vs wrong
 order = sorted(API + RL, key=lambda mk: report[mk].get("auroc2_self") or 0)
 fig, ax = plt.subplots(figsize=(7.2, 5.0))
+aurocs = []
 for y, mk in enumerate(order):
     M = report[mk]
     r, w = M.get("mode_conf_hit"), M.get("mode_conf_miss")
     if r is None or w is None:
+        aurocs.append(None)
         continue
-    bad = w > r
     ax.plot([w, r], [y, y], color="#bbbbbb", lw=2, zorder=1)
-    ax.scatter([r], [y], s=60, color=COLOR[mk], zorder=3, label="right" if y == 0 else None)
+    ax.scatter([r], [y], s=60, color=COLOR[mk], zorder=3)
     ax.scatter([w], [y], s=60, facecolors="white", edgecolors=COLOR[mk],
-               lw=1.8, zorder=3, label="wrong" if y == 0 else None)
-    a = M.get("auroc2_self")
-    note = f"AUROC {a:.2f}" + ("  ← more confident when wrong" if bad else "")
-    ax.text(103, y, note, va="center", fontsize=8.5,
-            color="#c02020" if bad else "#555555")
+               lw=1.8, zorder=3)
+    aurocs.append(M.get("auroc2_self"))
 ax.set_yticks(range(len(order)), [NAME[m] for m in order])
-ax.set_xlim(0, 102)
+ax.set_xlim(0, 100)
 ax.set_xlabel("Stated confidence that its own self-prediction is right\n"
               "(filled dot = when it actually was right,  open dot = when it was wrong)")
 ax.set_title("Stated confidence on correct vs. incorrect self-predictions")
+
+# AUROC lives on a twin axis rather than as text past the x limit, so the
+# plot area keeps the full figure width instead of being squeezed to two thirds
+ax2 = ax.twinx()
+ax2.set_ylim(ax.get_ylim())
+ax2.set_yticks(range(len(order)),
+               ["" if a is None else f"AUROC {a:.2f}" for a in aurocs])
+ax2.tick_params(length=0)
+for t, a in zip(ax2.get_yticklabels(), aurocs):
+    t.set_fontsize(8.5)
+    t.set_color("#c02020" if (a is not None and a < 0.5) else "#555555")
+ax.text(0, -0.20, "Red: AUROC below 0.5, meaning the model stated more confidence when it was wrong.",
+        transform=ax.transAxes, fontsize=8, color="#666666", va="top")
 save(fig, "fig2.png")
 
 # ---------------------------------------------------------------- figure 3
