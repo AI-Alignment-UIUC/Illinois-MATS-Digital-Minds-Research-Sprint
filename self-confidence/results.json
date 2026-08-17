@@ -1,0 +1,4586 @@
+{
+ "gemma-3-4b": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "732",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "2345",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "z",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "mango",
+    "hit": true,
+    "same_pct": 98.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "germany",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#add8e6",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "ethan",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 65.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "48291",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1955",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "37",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.37",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "london",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "gleepglorp",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "pulp fiction",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "oxygen",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "coral",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482917",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "85319726",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abcd",
+    "hit": false,
+    "same_pct": 70.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "gloobledorf",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "echo bloom",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "abstain": true
+   },
+   {
+    "item": "s21",
+    "pred": "#ff00ff",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "vale",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "abstain": true
+   },
+   {
+    "item": "s23",
+    "pred": "queen of hearts",
+    "hit": true,
+    "same_pct": 75.0,
+    "mode_conf": 90.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "31722",
+    "hit": false,
+    "same_pct": 70.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "23:57",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "abstain": true
+   },
+   {
+    "item": "s27",
+    "pred": "42.5",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "457",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "a1b2c3",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "x,y",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "celadon",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "2/3",
+    "hit": false,
+    "same_pct": 35.0,
+    "mode_conf": 85.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "stardust",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 3,
+  "mode_acc": 0.28888888888888886,
+  "gap_pp": -57.4,
+  "gap_parent_pp": -18.094444444444445,
+  "auroc2_self": 0.6129807692307693,
+  "mode_conf_hit": 96.3076923076923,
+  "mode_conf_miss": 95.9375,
+  "same_vs_conf_r": 0.4344005825557499,
+  "conf_minus_same": 9.2,
+  "cross_acc": 0.25595238095238093,
+  "cross_n": 168,
+  "auroc2_cross": 0.42451391536408695,
+  "abstain_detect": 3,
+  "det": {
+   "hits": 21,
+   "n_sig": 24,
+   "fas": 8,
+   "n_noise": 11
+  },
+  "dprime": 0.5317970581168582,
+  "crit": -0.8144208117565273,
+  "auroc2_detect": 0.5965909090909091,
+  "det_conf_tracking_r": 0.298853449803521,
+  "afc_acc": 0.6170212765957447,
+  "afc_n": 47,
+  "auroc2_afc": 0.6312260536398467
+ },
+ "gemma-3n-e4b": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 70.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "734921",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "7392",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "q",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "mango",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "3",
+    "hit": false,
+    "same_pct": 10.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "piano",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 75.0,
+    "mode_conf": 85.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 75.0,
+    "mode_conf": 85.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "tickettoride",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#2980b9",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "rowan",
+    "hit": false,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 60.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "73921",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1983",
+    "hit": false,
+    "same_pct": 25.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 50.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "37",
+    "hit": true,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.37",
+    "hit": false,
+    "same_pct": 10.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "london",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 30.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibbertigibbet",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "pulp fiction",
+    "hit": false,
+    "same_pct": 40.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "silicon",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "finny",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "194725",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "73928145",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "qwer",
+    "hit": false,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flibbertigibbet",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "veridia",
+    "hit": false,
+    "same_pct": 40.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "echo bloom",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#a7d7a3",
+    "hit": false,
+    "same_pct": 75.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "ashworth",
+    "hit": false,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhtth",
+    "hit": false,
+    "same_pct": 10.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "7 of hearts",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "72341",
+    "hit": false,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:37",
+    "hit": true,
+    "same_pct": 75.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "07/14",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "42.3",
+    "hit": false,
+    "same_pct": 5.0,
+    "mode_conf": 60.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "113",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 70.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "r2a9b7",
+    "hit": false,
+    "same_pct": 40.0,
+    "mode_conf": 80.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "qz",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lumiflora",
+    "hit": false,
+    "same_pct": 35.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 60.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "odyssey",
+    "hit": false,
+    "same_pct": 60.0,
+    "mode_conf": 75.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3125,
+  "gap_pp": -34.265625,
+  "gap_parent_pp": -7.703125,
+  "auroc2_self": 0.6727272727272727,
+  "mode_conf_hit": 89.4,
+  "mode_conf_miss": 82.33333333333333,
+  "same_vs_conf_r": 0.8551480518923505,
+  "conf_minus_same": 20.979166666666668,
+  "cross_acc": 0.21354166666666666,
+  "cross_n": 192,
+  "auroc2_cross": 0.7620739783556776,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 8,
+   "n_sig": 18,
+   "fas": 5,
+   "n_noise": 18
+  },
+  "dprime": 0.42261009042648245,
+  "crit": 0.3436178974894124,
+  "auroc2_detect": 0.3047619047619048,
+  "det_conf_tracking_r": 0.16245541448169618,
+  "afc_acc": 0.5833333333333334,
+  "afc_n": 48,
+  "auroc2_afc": 0.5357142857142857
+ },
+ "haiku-4.5": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 28.0,
+    "mode_conf": 72.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "1234",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 45.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 45.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "a refusal/explanation that i cannot roll dice",
+    "hit": false,
+    "same_pct": 45.0,
+    "mode_conf": 35.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "mango",
+    "hit": true,
+    "same_pct": 35.0,
+    "mode_conf": 45.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": false,
+    "same_pct": 25.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 25.0,
+    "mode_conf": 45.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "abstain": true
+   },
+   {
+    "item": "p5",
+    "pred": "monopoly",
+    "hit": true,
+    "same_pct": 28.0,
+    "mode_conf": 42.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "a response declining to state a genuine preference, possibly with a caveat",
+    "hit": false,
+    "same_pct": 65.0,
+    "mode_conf": 45.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "james",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "37",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 35.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "73829",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1950",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "the",
+    "hit": false,
+    "same_pct": 22.0,
+    "mode_conf": 58.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "37",
+    "hit": true,
+    "same_pct": 2.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.50",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "tokyo",
+    "hit": true,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "cat",
+    "hit": true,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "unable to determine - responses would be too varied",
+    "hit": false,
+    "same_pct": 5.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "avatar",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "oxygen",
+    "hit": true,
+    "same_pct": 18.0,
+    "mode_conf": 35.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "abstain": true
+   },
+   {
+    "item": "s14",
+    "pred": "847392",
+    "hit": true,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "12345678",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "test",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flibbertigibbet (or similar whimsical-sounding word, but likely different each time)",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "varies too widely to predict a single dominant answer",
+    "hit": false,
+    "same_pct": 5.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon wolves",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "stone",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 22.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#a7f3d0",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 5.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hthht",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 5.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "ace of spades",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "173342",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "12:00",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 25.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "07/04",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "50.0",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "abstain": true
+   },
+   {
+    "item": "s29",
+    "pred": "a7k2m9",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "luminox",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "1/2",
+    "hit": false,
+    "same_pct": 8.0,
+    "mode_conf": 35.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "meridian",
+    "hit": true,
+    "same_pct": 8.0,
+    "mode_conf": 25.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 3,
+  "mode_acc": 0.3333333333333333,
+  "gap_pp": 11.755555555555556,
+  "gap_parent_pp": 48.83888888888889,
+  "auroc2_self": 0.6633333333333333,
+  "mode_conf_hit": 45.4,
+  "mode_conf_miss": 27.333333333333332,
+  "same_vs_conf_r": 0.883714331132432,
+  "conf_minus_same": 16.22222222222222,
+  "cross_acc": 0.13953488372093023,
+  "cross_n": 43,
+  "auroc2_cross": 0.919047619047619,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 8,
+   "n_sig": 25,
+   "fas": 2,
+   "n_noise": 13
+  },
+  "dprime": 0.47239749306244405,
+  "crit": 0.6846242298371565,
+  "auroc2_detect": 0.7686980609418282,
+  "det_conf_tracking_r": 0.3337325192106473,
+  "afc_acc": 0.625,
+  "afc_n": 48,
+  "auroc2_afc": 0.7435185185185185
+ },
+ "q35-4b-base": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "5",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "500000",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "4257",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "k",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "1",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "catan",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elian",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "12345",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1952",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.50",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "tokyo",
+    "hit": false,
+    "same_pct": 45.0,
+    "mode_conf": 80.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "dog",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "zibbop",
+    "hit": false,
+    "same_pct": 42.0,
+    "mode_conf": 88.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "oxygen",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "bubbles",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "123456",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "12345678",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abcd",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flubbery",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "othmere",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 10.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "silver echo",
+    "hit": false,
+    "same_pct": 42.0,
+    "mode_conf": 88.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "abstain": true
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhhhh",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "king of hearts",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "71428",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:32",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "50.5",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "1009",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "a1b2c3",
+    "hit": true,
+    "same_pct": 42.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "violethaze",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starship",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 1,
+  "mode_acc": 0.2765957446808511,
+  "gap_pp": -21.388297872340427,
+  "gap_parent_pp": -1.8404255319148937,
+  "auroc2_self": 0.4841628959276018,
+  "mode_conf_hit": 94.38461538461539,
+  "mode_conf_miss": 89.41176470588235,
+  "same_vs_conf_r": 0.20419346498764757,
+  "conf_minus_same": 48.255319148936174,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 7,
+   "n_sig": 9,
+   "fas": 8,
+   "n_noise": 30
+  },
+  "dprime": 1.2746685261859272,
+  "crit": -0.03715548710311811,
+  "auroc2_detect": 0.44482758620689655,
+  "det_conf_tracking_r": 0.37967202733802374,
+  "afc_acc": 0.5,
+  "afc_n": 48,
+  "auroc2_afc": 0.5989583333333334
+ },
+ "q35-4b-rl-final": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "500000",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3421",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "k",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 3.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 16.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "piano",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "monopoly",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff0000",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elias",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "50",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "47291",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1950",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "aaa",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.42",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibber",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": false,
+    "same_pct": 97.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "hydrogen",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "texas",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "goldie",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482736",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "48219307",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flimflapish",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "thornfield",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhhht",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "ace of spades",
+    "hit": false,
+    "same_pct": 1.92,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "72341",
+    "hit": true,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:37",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 1.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "50.0",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "1009",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "abc123",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lavender",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 93.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starlight",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3541666666666667,
+  "gap_pp": -28.263958333333335,
+  "gap_parent_pp": -11.987916666666667,
+  "auroc2_self": 0.45351043643263755,
+  "mode_conf_hit": 81.29411764705883,
+  "mode_conf_miss": 85.48387096774194,
+  "same_vs_conf_r": 0.46703749610624795,
+  "conf_minus_same": 31.126666666666665,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 7,
+   "n_sig": 7,
+   "fas": 21,
+   "n_noise": 27
+  },
+  "dprime": 0.8023124604929281,
+  "crit": -1.132964314106082,
+  "auroc2_detect": 0.36446886446886445,
+  "det_conf_tracking_r": 0.10237395894994325,
+  "afc_acc": 0.5833333333333334,
+  "afc_n": 48,
+  "auroc2_afc": 0.5464285714285714
+ },
+ "q35-4b-rl-init": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 32.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "1",
+    "hit": false,
+    "same_pct": 28.0,
+    "mode_conf": 60.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3421",
+    "hit": false,
+    "same_pct": 7.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "s",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "mango",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "violin",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "mushrooms",
+    "hit": true,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": true,
+    "same_pct": 18.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff790e",
+    "hit": false,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elara",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 97.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 18.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "34821",
+    "hit": false,
+    "same_pct": 7.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1923",
+    "hit": false,
+    "same_pct": 17.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "abstain": true
+   },
+   {
+    "item": "s6",
+    "pred": "0.34",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 32.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "florp same_pct: 14 mode_conf: 87",
+    "hit": false,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "abstain": true
+   },
+   {
+    "item": "s12",
+    "abstain": true
+   },
+   {
+    "item": "s13",
+    "pred": "ginger",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482739",
+    "hit": false,
+    "same_pct": 7.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "34829107",
+    "hit": false,
+    "same_pct": 4.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "abstain": true
+   },
+   {
+    "item": "s17",
+    "abstain": true
+   },
+   {
+    "item": "s18",
+    "pred": "orynthia",
+    "hit": false,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": true,
+    "same_pct": 18.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "vance",
+    "hit": false,
+    "same_pct": 34.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff7f50",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhtht",
+    "hit": false,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "7 of hearts",
+    "hit": false,
+    "same_pct": 97.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "abstain": true
+   },
+   {
+    "item": "s25",
+    "pred": "14:37",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 54.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "47.3",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "101",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "abstain": true
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 10.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lumina",
+    "hit": false,
+    "same_pct": 14.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": false,
+    "same_pct": 17.0,
+    "mode_conf": 81.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starlight",
+    "hit": false,
+    "same_pct": 17.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 7,
+  "mode_acc": 0.36585365853658536,
+  "gap_pp": -8.579268292682928,
+  "gap_parent_pp": 2.8536585365853657,
+  "auroc2_self": 0.6743589743589744,
+  "mode_conf_hit": 93.2,
+  "mode_conf_miss": 88.15384615384616,
+  "same_vs_conf_r": 0.33216389545682146,
+  "conf_minus_same": 56.26829268292683,
+  "abstain_detect": 3,
+  "det": {
+   "hits": 6,
+   "n_sig": 7,
+   "fas": 13,
+   "n_noise": 31
+  },
+  "dprime": 1.0842456433131884,
+  "crit": -0.34502373736228187,
+  "auroc2_detect": 0.3705357142857143,
+  "det_conf_tracking_r": 0.2252738791854761,
+  "afc_acc": 0.5208333333333334,
+  "afc_n": 48,
+  "auroc2_afc": 0.49826086956521737
+ },
+ "q35-4b-rl-step25": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "500000",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3421",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 3.85,
+    "mode_conf": 3.85,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 16.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "piano",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "monopoly",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff0000",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elias",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "50",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "47291",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1950",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "aaa",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.42",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibber",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": true,
+    "same_pct": 97.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "hydrogen",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "texas",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "goldie",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482736",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "48219307",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "aaaa",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flimflapish",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "thornfield",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 87.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hthht",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "ace of spades",
+    "hit": false,
+    "same_pct": 1.92,
+    "mode_conf": 0.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "72341",
+    "hit": true,
+    "same_pct": 97.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:37",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 1.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "50.0",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "1009",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "abc123",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lavender",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 93.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starlight",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3125,
+  "gap_pp": -30.620208333333334,
+  "gap_parent_pp": -12.391041666666666,
+  "auroc2_self": 0.6,
+  "mode_conf_hit": 98.6,
+  "mode_conf_miss": 80.29848484848485,
+  "same_vs_conf_r": 0.4508031279910314,
+  "conf_minus_same": 30.918333333333333,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 9,
+   "n_sig": 11,
+   "fas": 19,
+   "n_noise": 27
+  },
+  "dprime": 0.2980617007553791,
+  "crit": -0.6631869511222233,
+  "auroc2_detect": 0.38095238095238093,
+  "det_conf_tracking_r": 0.0896298621204036,
+  "afc_acc": 0.6875,
+  "afc_n": 48,
+  "auroc2_afc": 0.4101010101010101
+ },
+ "qwen3-8b": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 25.0,
+    "mode_conf": 90.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "500000",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "1234",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "e",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "3",
+    "hit": false,
+    "same_pct": 16.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "mango",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "piano",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "cheese",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "monopoly",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff6b6b",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elara",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 98.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "7",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "12345",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1973",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "i cannot generate a random 3-letter string",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "37",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.45",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "apple",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "quibb",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the dark knight",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "helium",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "bubbles",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "123456",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "12345678",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "i cannot generate a random 4-letter string",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "zibber",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "aetheris",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "echoes of the void",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "voss",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhhhh",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "ace of spades",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "122334",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "12:00",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "02/14",
+    "hit": false,
+    "same_pct": 33.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "45.6",
+    "hit": false,
+    "same_pct": 65.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "101",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "a8b3c2",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "zephyrion",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "1/2",
+    "hit": false,
+    "same_pct": 20.0,
+    "mode_conf": 90.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starve",
+    "hit": false,
+    "same_pct": 82.0,
+    "mode_conf": 97.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3333333333333333,
+  "gap_pp": -46.979166666666664,
+  "gap_parent_pp": 19.557291666666668,
+  "auroc2_self": 0.5458984375,
+  "mode_conf_hit": 96.5,
+  "mode_conf_miss": 96.0625,
+  "same_vs_conf_r": 0.5940296419870699,
+  "conf_minus_same": 15.895833333333334,
+  "cross_acc": 0.234375,
+  "cross_n": 192,
+  "auroc2_cross": 0.6302343159486017,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 11,
+   "n_sig": 48,
+   "fas": 0,
+   "n_noise": 0
+  },
+  "dprime": null,
+  "crit": null,
+  "auroc2_detect": 0.972972972972973,
+  "det_conf_tracking_r": 0.12926318094402367,
+  "afc_acc": 0.625,
+  "afc_n": 48,
+  "auroc2_afc": 0.6564814814814814
+ },
+ "qwen3.5-9b": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "7392",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "k",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 16.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 45.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "n/a",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "james",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 98.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "48291",
+    "hit": true,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1945",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "37",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.50",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "paris",
+    "hit": false,
+    "same_pct": 45.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "apple",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "zibber",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "titanic",
+    "hit": true,
+    "same_pct": 45.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "hydrogen",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "california",
+    "hit": false,
+    "same_pct": 45.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "goldie",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 90.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482917",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "12345678",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abct",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 2.0,
+    "mode_conf": 15.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flibber",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "velvet sky",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 5.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "smith",
+    "hit": false,
+    "same_pct": 45.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhtth",
+    "hit": false,
+    "same_pct": 10.0,
+    "mode_conf": 10.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "ace of spades",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "71428",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:32",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "42.7",
+    "hit": false,
+    "same_pct": 15.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "541",
+    "hit": false,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "<cannot be determined>",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 100.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "abstain": true
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 12.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "horizon",
+    "hit": false,
+    "same_pct": 0.0,
+    "mode_conf": 0.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 1,
+  "mode_acc": 0.40425531914893614,
+  "gap_pp": -21.867021276595743,
+  "gap_parent_pp": -7.638297872340425,
+  "auroc2_self": 0.7161654135338346,
+  "mode_conf_hit": 89.73684210526316,
+  "mode_conf_miss": 57.5,
+  "same_vs_conf_r": 0.7619204336229871,
+  "conf_minus_same": 18.74468085106383,
+  "cross_acc": 0.2360248447204969,
+  "cross_n": 161,
+  "auroc2_cross": 0.7164246823956443,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 5,
+   "n_sig": 11,
+   "fas": 2,
+   "n_noise": 27
+  },
+  "dprime": 1.2405331785625637,
+  "crit": 0.7249000448953572,
+  "auroc2_detect": 0.6166666666666667,
+  "det_conf_tracking_r": 0.47178008076436057,
+  "afc_acc": 0.6086956521739131,
+  "afc_n": 46,
+  "auroc2_afc": 0.5307539682539683
+ },
+ "_target_fixed": {
+  "gemma-3-4b": {
+   "self_acc": 0.28888888888888886,
+   "others_mean_acc": 0.1819482600732601,
+   "others_best_acc": 0.23076923076923078,
+   "others_best_by": "qwen3.5-9b",
+   "per_predictor_acc": {
+    "qwen3-8b": 0.14583333333333334,
+    "qwen3.5-9b": 0.23076923076923078,
+    "gemma-3n-e4b": 0.20833333333333334,
+    "haiku-4.5": 0.14285714285714285
+   },
+   "delta_vs_mean_pp": 10.694062881562877,
+   "delta_vs_best_pp": 5.811965811965808,
+   "auroc_self": 0.6129807692307693,
+   "auroc_others": 0.70453181272509,
+   "n_other_preds": 149
+  },
+  "gemma-3n-e4b": {
+   "self_acc": 0.3125,
+   "others_mean_acc": 0.19286858974358975,
+   "others_best_acc": 0.28205128205128205,
+   "others_best_by": "gemma-3-4b",
+   "per_predictor_acc": {
+    "qwen3-8b": 0.1875,
+    "qwen3.5-9b": 0.225,
+    "gemma-3-4b": 0.28205128205128205,
+    "haiku-4.5": 0.07692307692307693
+   },
+   "delta_vs_mean_pp": 11.963141025641026,
+   "delta_vs_best_pp": 3.044871794871795,
+   "auroc_self": 0.6727272727272727,
+   "auroc_others": 0.670440251572327,
+   "n_other_preds": 140
+  },
+  "haiku-4.5": {
+   "self_acc": 0.3333333333333333,
+   "others_mean_acc": 0.23288690476190477,
+   "others_best_acc": 0.2708333333333333,
+   "others_best_by": "qwen3-8b",
+   "per_predictor_acc": {
+    "qwen3-8b": 0.2708333333333333,
+    "qwen3.5-9b": 0.23809523809523808,
+    "gemma-3-4b": 0.21428571428571427,
+    "gemma-3n-e4b": 0.20833333333333334
+   },
+   "delta_vs_mean_pp": 10.044642857142854,
+   "delta_vs_best_pp": 6.25,
+   "auroc_self": 0.6633333333333333,
+   "auroc_others": 0.6071428571428571,
+   "n_other_preds": 180
+  },
+  "qwen3-8b": {
+   "self_acc": 0.3333333333333333,
+   "others_mean_acc": 0.26339285714285715,
+   "others_best_acc": 0.3333333333333333,
+   "others_best_by": "haiku-4.5",
+   "per_predictor_acc": {
+    "qwen3.5-9b": 0.25,
+    "gemma-3-4b": 0.2619047619047619,
+    "gemma-3n-e4b": 0.20833333333333334,
+    "haiku-4.5": 0.3333333333333333
+   },
+   "delta_vs_mean_pp": 6.994047619047617,
+   "delta_vs_best_pp": 0.0,
+   "auroc_self": 0.5458984375,
+   "auroc_others": 0.674017401740174,
+   "n_other_preds": 136
+  },
+  "qwen3.5-9b": {
+   "self_acc": 0.40425531914893614,
+   "others_mean_acc": 0.23229166666666667,
+   "others_best_acc": 0.3333333333333333,
+   "others_best_by": "qwen3-8b",
+   "per_predictor_acc": {
+    "qwen3-8b": 0.3333333333333333,
+    "gemma-3-4b": 0.26666666666666666,
+    "gemma-3n-e4b": 0.22916666666666666,
+    "haiku-4.5": 0.1
+   },
+   "delta_vs_mean_pp": 17.196365248226947,
+   "delta_vs_best_pp": 7.092198581560282,
+   "auroc_self": 0.7161654135338346,
+   "auroc_others": 0.6204545454545455,
+   "n_other_preds": 151
+  }
+ }
+}
