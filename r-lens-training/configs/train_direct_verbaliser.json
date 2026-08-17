@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen3.5-4B",
+  "model_path": "data/models/Qwen3.5-4B",
+  "documents_path": "data/documents/short_documents.jsonl",
+  "lens_dir": "artifacts/jlenses/Qwen3.5-4B",
+
+  "optim": {
+    "num_steps": 500,
+    "batch_size": 128,
+    "micro_batch_size": 128,
+    "layer_range": [14, 24],
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_target_modules": ["gate_proj", "up_proj", "down_proj"],
+    "lr": 9e-05,
+    "adam_betas": [0.8, 0.95],
+    "max_grad_norm": 1.0,
+    "dtype": "bfloat16",
+    "seed": 0
+  },
+
+  "run": {
+    "name": "direct3",
+    "train_gpu": 3,
+    "logging": {
+      "log_every": 1,
+      "plot_every": 25,
+      "sample_every": 50,
+      "checkpoint_every": 200
+    }
+  }
+}

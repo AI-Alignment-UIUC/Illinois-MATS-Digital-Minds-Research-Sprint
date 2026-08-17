@@ -1,0 +1,14 @@
+{
+  "model_name": "gemma-4-E2B-it",
+  "model_path": "data/models/gemma-4-E2B-it",
+  "documents_path": "data/documents/documents.jsonl",
+  "output_dir": "artifacts/jlenses",
+  "lens_type": "r",
+  "max_documents": 1000,
+  "max_seq_len": 512,
+  "batch_size": 4,
+  "num_probes": 4,
+  "dtype": "bfloat16",
+  "device": "cuda:0",
+  "seed": 0
+}

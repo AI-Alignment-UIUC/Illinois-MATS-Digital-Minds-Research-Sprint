@@ -1,0 +1,48 @@
+{
+  "model_name": "gemma-4-E2B-it",
+  "model_path": "data/models/gemma-4-E2B-it",
+  "documents_path": "data/documents/short_documents.jsonl",
+  "lens_dir": "artifacts/jlenses/gemma-4-E2B-it",
+  "optim": {
+    "num_steps": 50,
+    "num_prompts": 32,
+    "group_size": 16,
+    "max_new_tokens": 768,
+    "temperature": 1.0,
+    "enable_thinking": true,
+    "layer_range": [
+      15,
+      28
+    ],
+    "format_penalty": -1.0,
+    "min_think_tokens": 32,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_target_modules": [
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "lr": 4e-05,
+    "adam_betas": [
+      0.8,
+      0.95
+    ],
+    "max_grad_norm": 1.0,
+    "micro_batch_size": 64,
+    "dtype": "bfloat16",
+    "seed": 0
+  },
+  "run": {
+    "name": "verbalizer_gemma_rl_final_3_cont",
+    "backend": "hf",
+    "train_gpu": 3,
+    "rollout_batch_size": 128,
+    "logging": {
+      "plot_every": 1,
+      "sample_every": 5,
+      "checkpoint_every": 20
+    }
+  },
+  "init_adapter": "artifacts/runs/verbalizer_gemma_rl_final_3/adapter"
+}

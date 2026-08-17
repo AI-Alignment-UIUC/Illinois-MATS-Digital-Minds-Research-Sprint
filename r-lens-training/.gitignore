@@ -1,0 +1,35 @@
+# Local agent / editor session state
+.claude/
+.vscode/
+.idea/
+
+# Run logs. Regenerable, and they embed absolute paths from whichever host the
+# training ran on (the raw SGLang server log also runs to ~12 MB).
+*.log
+
+# Model weights, fitted lens matrices, trained adapters: large and regenerable.
+data/models/
+artifacts/jlenses/
+artifacts/runs/*/adapter/
+artifacts/runs/*/init_adapter/
+artifacts/runs/*/checkpoints/
+*.safetensors
+*.bin
+*.pt
+
+# Virtualenvs (.venv for training/serving, .venv-sglang for Qwen rollouts)
+.venv*/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# The long-document FineWeb-Edu dump used only for lens fitting: 5.6 MB, fully
+# regenerable with scripts/download_documents.py, and it carries a handful of
+# third-party contact emails inherited from the source corpus.
+#
+# data/documents/short_documents.jsonl is deliberately NOT ignored: it is the
+# episode pool that defines the experiment, it is only 224 KB, and it contains
+# no email addresses.
+data/documents/documents.jsonl

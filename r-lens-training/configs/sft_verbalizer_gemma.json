@@ -1,0 +1,25 @@
+{
+  "model_name": "gemma-4-E2B-it",
+  "model_path": "data/models/gemma-4-E2B-it",
+  "traces_path": "data/rlens_thinking_trajs_warmstart_gemma.jsonl",
+
+  "optim": {
+    "epochs": 3,
+    "batch_size": 32,
+    "micro_batch_size": 16,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_target_modules": ["gate_proj", "up_proj", "down_proj"],
+    "lr": 5e-05,
+    "adam_betas": [0.8, 0.95],
+    "max_grad_norm": 1.0,
+    "dtype": "bfloat16",
+    "seed": 0
+  },
+
+  "run": {
+    "name": "sft_warmstart_gemma",
+    "train_gpu": 4,
+    "logging": {}
+  }
+}
