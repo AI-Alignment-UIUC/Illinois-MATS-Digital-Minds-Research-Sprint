@@ -70,40 +70,48 @@ def save(fig, name):
 
 
 # ---------------------------------------------------------------- figure 1
-# The decomposition: can it tell (sensitivity) vs which way it leans (bias)
-fig, ax = plt.subplots(figsize=(7.2, 5.4))
-ax.axhline(0, color="#cccccc", lw=1)
-ax.axvline(0, color="#cccccc", lw=1)
-for mk in API + RL:
+# The decomposition for the off-the-shelf panel: can it tell (sensitivity) vs
+# which way it leans (bias).  The verbalizer checkpoints get their own figure 7 —
+# crowding both stories into one panel made the labels collide.
+INK, MUTED = "#333333", "#8a8a8a"
+
+# hand-placed label offsets: only four points, so nudge rather than auto-place
+LBL = {  # model: (dx, dy, ha, va)
+    "qwen3.5-9b":   (0.00, 0.075, "center", "bottom"),
+    "haiku-4.5":    (0.00, 0.075, "center", "bottom"),
+    "gemma-3n-e4b": (0.00, -0.075, "center", "top"),
+    "gemma-3-4b":   (0.00, 0.075, "center", "bottom"),
+}
+fig, ax = plt.subplots(figsize=(7.2, 5.2))
+ax.axvline(0, color="#dddddd", lw=1, zorder=0)
+for mk in API:
     M = report[mk]
     d, c = M.get("dprime"), M.get("crit")
     if d is None or c is None:
         continue
-    ax.scatter(c, d, s=70, color=COLOR[mk], zorder=3)
-    dx, dy = (0.05, 0.07)
-    if mk == "q35-4b-rl-init":
-        dy = -0.16
-    if mk == "q35-4b-base":
-        dx, dy = (-0.72, -0.03)
-    ax.annotate(NAME[mk], (c, d), xytext=(c + dx, d + dy), fontsize=9,
-                color=COLOR[mk], fontweight="bold")
-# arrows along the RL trajectory
-pts = [(report[mk]["crit"], report[mk]["dprime"]) for mk in RL[1:]]
-for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
-    ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>",
-                                 mutation_scale=14, color="#9467bd", lw=1.4,
-                                 shrinkA=8, shrinkB=8, zorder=2))
-ax.set_xlabel("Bias:  claims consistency too often  ←  0  →  denies it too often")
-ax.set_ylabel("Sensitivity: how well the model can tell\nwhich prompts it is consistent on")
-ax.set_title("Two different failures behind the same gap")
+    ax.scatter(c, d, s=110, color=COLOR[mk], zorder=3, edgecolors="white", lw=2)
+    dx, dy, ha, va = LBL.get(mk, (0.0, 0.075, "center", "bottom"))
+    ax.annotate(NAME[mk], (c + dx, d + dy), fontsize=9.5, color=INK,
+                fontweight="bold", ha=ha, va=va)
+
+ax.set_xlabel("What it says:  claims consistency too often  ←  0  →  denies it too often")
+ax.set_ylabel("What it can tell: how well it separates\nits consistent prompts from its variable ones")
+ax.set_title("The bench models fail in two different ways")
 lo, hi = ax.get_xlim()
-m = max(abs(lo), abs(hi))
+m = max(abs(lo), abs(hi), 1.05)
 ax.set_xlim(-m, m)
-ax.text(0.02, 0.02,
-        "Qwen3 8B not shown: it was consistent on every prompt,\n"
-        "so its sensitivity cannot be computed.  Arrows: RL training over time.",
-        transform=ax.transAxes, fontsize=8, color="#666666", va="bottom")
-save(fig, "fig1_can_it_tell_vs_will_it_say.png")
+ax.set_ylim(0, 1.55)
+
+# quadrant framing: the two failure modes the gap metric cannot separate
+for x, ha, side in ((-m + 0.06, "left", "over-claims"), (m - 0.06, "right", "denies")):
+    ax.text(x, 1.50, f"detects well,\n{side}", fontsize=8.5, color=MUTED,
+            ha=ha, va="top", linespacing=1.4)
+    ax.text(x, 0.06, f"detects poorly,\n{side}", fontsize=8.5, color=MUTED,
+            ha=ha, va="bottom", linespacing=1.4)
+ax.text(0.5, -0.20, "Qwen3 8B is absent: its route returned an identical answer to every prompt, "
+        "so its sensitivity cannot be computed.",
+        transform=ax.transAxes, fontsize=8, color=MUTED, ha="center", va="top")
+save(fig, "fig1.png")
 
 # ---------------------------------------------------------------- figure 2
 # Stated confidence when the self-prediction was right vs wrong
@@ -127,8 +135,8 @@ ax.set_yticks(range(len(order)), [NAME[m] for m in order])
 ax.set_xlim(0, 102)
 ax.set_xlabel("Stated confidence that its own self-prediction is right\n"
               "(filled dot = when it actually was right,  open dot = when it was wrong)")
-ax.set_title("Does the model know when it is right about itself?")
-save(fig, "fig2_confidence_when_right_vs_wrong.png")
+ax.set_title("Stated confidence on correct vs. incorrect self-predictions")
+save(fig, "fig2.png")
 
 # ---------------------------------------------------------------- figure 3
 # Target-fixed cross-prediction: who predicts model A best?
@@ -148,26 +156,32 @@ if target_fixed:
                 ha="center", fontsize=7.5, color="#555555")
     ax.set_xticks(list(xs), [NAME[t] for t in tks])
     ax.set_ylabel("Accuracy predicting this model's\nmost common answer")
-    ax.set_title("Who predicts each model best — the model itself, or the others?")
+    ax.set_title("Prediction accuracy by target model: self vs. others")
     ax.legend(frameon=False, loc="upper right", fontsize=9)
-    save(fig, "fig3_who_predicts_whom.png")
+    save(fig, "fig3.png")
 
 # ---------------------------------------------------------------- figure 4
 # What RL training changed, step by step
 panels = [
-    ("mode_acc", "Self-prediction accuracy", None, None),
-    ("gap_parent_pp", "Consistency gap (percentage points)\n+ = under-claims, − = over-claims", 0, None),
-    ("crit", "Bias\n(− = claims consistency too often)", 0, None),
-    ("auroc2_self", "Does its confidence know\nwhen it is right? (AUROC)", 0.5, "no better than chance"),
+    ("mode_acc", None, "Self-prediction accuracy", None, None),
+    ("gap_parent_pp", None, "Consistency gap (pp)\n(+ = under-claims, − = over-claims)", 0, None),
+    ("crit", "crit_ci", "Response criterion c\n(− = over-claims consistency)", 0, None),
+    ("auroc2_self", "auroc2_self_ci", "Confidence AUROC\n(correct vs. incorrect self-predictions)", 0.5, "chance"),
 ]
 fig, axes = plt.subplots(2, 2, figsize=(8.2, 6.0), sharex=True)
 xs = range(len(RL))
-for ax, (key, title, ref, ref_label) in zip(axes.flat, panels):
+for ax, (key, ci_key, title, ref, ref_label) in zip(axes.flat, panels):
     ys = [report[mk].get(key) for mk in RL]
     if ref is not None:
         ax.axhline(ref, color="#cccccc", lw=1, ls="--")
         if ref_label:
             ax.text(0.02, ref + 0.005, ref_label, fontsize=7.5, color="#999999")
+    if ci_key:  # 95% bootstrap CIs from analyze.py, where defined
+        for x, mk in zip(xs, RL):
+            ci = report[mk].get(ci_key)
+            if ci:
+                ax.plot([x, x], ci, color="#5e3c99" if x else "#999999",
+                        lw=1.2, alpha=0.45, zorder=1)
     ax.plot(list(xs)[1:], ys[1:], "-o", color="#5e3c99", ms=6)
     ax.plot(xs[0], ys[0], "o", color="#999999", ms=6)
     ax.set_title(title, fontsize=9.5)
@@ -176,8 +190,8 @@ for ax, (key, title, ref, ref_label) in zip(axes.flat, panels):
              "q35-4b-rl-step75": "5\nstep 75", "q35-4b-rl-final": "6\nlatest",
              "q35-4b-rl-latest": "6\nlatest"}
     ax.set_xticks(list(xs), [short[mk] for mk in RL], fontsize=8.5)
-fig.suptitle("What RL training changed — and what it didn't", fontweight="bold", y=1.0)
-save(fig, "fig4_what_rl_changed.png")
+fig.suptitle("Self-report metrics across verbalizer training checkpoints", fontweight="bold", y=1.0)
+save(fig, "fig4.png")
 
 # ---------------------------------------------------------------- figure 5
 # Ground truth per model: where the prompts landed on the consistency axis
@@ -196,9 +210,81 @@ for y, mk in enumerate(show):
 ax.set_yticks(range(len(show)), [NAME[m] for m in show])
 ax.set_xlabel("How consistent the model actually is on each prompt\n"
               "(share of 16 fresh samples giving the same answer)")
-ax.set_title("Ground truth: each dot is one prompt", pad=22)
+ax.set_title("Ground-truth answer consistency per prompt", pad=22)
 ax.set_xlim(0, 1.001)
 ax.invert_yaxis()
-save(fig, "fig5_ground_truth_spread.png")
+save(fig, "fig5.png")
+
+# ---------------------------------------------------------------- figure 6
+# Criterion c under three wordings of the same yes/no self-question
+# (detect / detect2 reworded / detect3 polarity-flipped; see analyze.py)
+W_COLOR = {"v1": "#333333", "v2": "#0072b2", "v3": "#d55e00"}
+W_MARK = {"v1": "o", "v2": "D", "v3": "s"}
+W_LABEL = {"v1": 'v1  "DETERMINISTIC?"', "v2": 'v2  reworded ("SAME?")',
+           "v3": 'v3  polarity-flipped ("VARIED?")'}
+rows = [mk for mk in API + RL
+        if report[mk].get("crit") is not None and report[mk].get("det_variants")]
+if rows:
+    fig, ax = plt.subplots(figsize=(7.6, 5.6))
+    ax.axvline(0, color="#cccccc", lw=1)
+    for y, mk in enumerate(rows):
+        M = report[mk]
+        dv = M["det_variants"]
+        pts = {"v1": (M.get("crit"), M.get("crit_ci")),
+               "v2": (dv.get("detect2", {}).get("crit"), dv.get("detect2", {}).get("crit_ci")),
+               "v3": (dv.get("detect3", {}).get("crit"), dv.get("detect3", {}).get("crit_ci"))}
+        for w, (c, ci) in pts.items():
+            if c is None:
+                continue
+            if ci:
+                ax.plot(ci, [y, y], color=W_COLOR[w], lw=1.2, alpha=0.4, zorder=1)
+            ax.scatter([c], [y], s=46, marker=W_MARK[w], color=W_COLOR[w],
+                       zorder=3, label=W_LABEL[w] if y == 0 else None)
+    ax.set_yticks(range(len(rows)), [NAME[m] for m in rows])
+    ax.invert_yaxis()
+    ax.set_xlabel("Bias:  claims consistency too often  ←  0  →  denies it too often")
+    ax.set_title("Response criterion under three question wordings")
+    ax.legend(frameon=False, fontsize=8.5, loc="upper left")
+    fig.text(0.01, -0.02,
+             "Thin lines: 95% bootstrap CIs.  A genuine self-belief keeps one sign across "
+             "wordings; answering YES out of habit\nmirrors v1 across zero under the "
+             "polarity-flipped wording — the RL checkpoints' signature.",
+             fontsize=8, color="#666666", va="top")
+    save(fig, "fig6.png")
+
+# ---------------------------------------------------------------- figure 7
+# Same axes as figure 1, for the verbalizer training run only.  Numbers sit
+# inside the markers so the trajectory never collides with its own labels.
+STEP_LABEL = {"q35-4b-base": "base", "q35-4b-rl-init": "SFT",
+              "q35-4b-rl-step25": "RL step 25", "q35-4b-rl-step50": "RL step 50",
+              "q35-4b-rl-step75": "RL step 75", "q35-4b-rl-final": "RL latest",
+              "q35-4b-rl-latest": "RL latest"}
+LIGHT_FILL = {"q35-4b-base", "q35-4b-rl-init", "q35-4b-rl-step25"}
+pts = [(report[mk]["crit"], report[mk]["dprime"]) for mk in RL
+       if report[mk].get("crit") is not None and report[mk].get("dprime") is not None]
+if len(pts) == len(RL):
+    fig, ax = plt.subplots(figsize=(7.2, 5.2))
+    ax.axvline(0, color="#dddddd", lw=1, zorder=0)
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>",
+                                     mutation_scale=13, color="#b9a6d4", lw=1.6,
+                                     shrinkA=13, shrinkB=13, zorder=2))
+    for i, (mk, (c, d)) in enumerate(zip(RL, pts), start=1):
+        ax.scatter(c, d, s=310, color=COLOR[mk], zorder=3, edgecolors="white", lw=2,
+                   label=f"{i}  {STEP_LABEL[mk]}")
+        ax.text(c, d, str(i), fontsize=9, fontweight="bold", ha="center", va="center",
+                color=INK if mk in LIGHT_FILL else "white", zorder=4)
+    ax.set_xlabel("What it says:  claims consistency too often  ←  0  →  denies it too often")
+    ax.set_ylabel("What it can tell: how well it separates\n"
+                  "its consistent prompts from its variable ones")
+    ax.set_title("Training moved the verbalizer sideways, not upward")
+    ax.set_xlim(-2.0, 2.0)
+    ax.set_ylim(0, 1.55)
+    ax.legend(frameon=False, fontsize=8.5, loc="upper right", handletextpad=0.1,
+              labelspacing=0.55, borderpad=0.8)
+    ax.text(0.5, -0.20, "Arrows run in training order: 1→2 is the SFT stage, 2→6 is RL. "
+            "Axes as in figure 1, widened to fit the checkpoints.",
+            transform=ax.transAxes, fontsize=8, color=MUTED, ha="center", va="top")
+    save(fig, "fig7.png")
 
 print("done")

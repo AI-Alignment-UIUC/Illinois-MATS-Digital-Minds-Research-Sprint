@@ -1,56 +1,77 @@
 # Confidence-in-introspection arm — results
 
-Source: `results-api.jsonl, results.jsonl` · k=16 actor samples at T=1.0 · meta channels at T=0 · hint level L0 only · classes: consistent p(mode) ≥ 0.75, variable ≤ 0.4 (middle band excluded from d′/c, kept elsewhere)
+Source: `results-api.jsonl, results-paraphrase-api.jsonl, results-paraphrase-rlens.jsonl, results.jsonl` · k=16 actor samples at T=1.0 · meta channels at T=0 · hint level L0 only · classes: consistent p(mode) ≥ 0.75, variable ≤ 0.4 (middle band excluded from d′/c, kept elsewhere)
+
+Uncertainty: [lo, hi] = 95% percentile bootstrap over items (2000 resamples); p-values = two-sided permutation/sign-flip tests (2000 draws); seed 20260816. With ~48 items and heavily tied confidences these intervals are wide — treat any contrast whose interval spans the null as unresolved, not as absent.
 
 ## Headline: does the model know when its self-prediction is right?
 
-| model | mode-acc | cross-acc | AUROC self | AUROC cross | conf when right | conf when wrong | 2AFC acc | AUROC 2AFC |
+| model | mode-acc | AUROC self [95% CI] | n✓/n✗ | AUROC cross | Δ self−cross (p) | conf right/wrong | 2AFC acc | AUROC 2AFC |
 |---|---|---|---|---|---|---|---|---|
-| gemma-3-4b | 0.29 | 0.26 | 0.61 | 0.42 | 96 | 96 | 0.62 | 0.63 |
-| gemma-3n-e4b | 0.31 | 0.21 | 0.67 | 0.76 | 89 | 82 | 0.58 | 0.54 |
-| haiku-4.5 | 0.33 | 0.14 | 0.66 | 0.92 | 45 | 27 | 0.62 | 0.74 |
-| q35-4b-base | 0.28 | — | 0.48 | — | 94 | 89 | 0.50 | 0.60 |
-| q35-4b-rl-final | 0.35 | — | 0.45 | — | 81 | 85 | 0.58 | 0.55 |
-| q35-4b-rl-init | 0.37 | — | 0.67 | — | 93 | 88 | 0.52 | 0.50 |
-| q35-4b-rl-latest | 0.32 | — | 0.64 | — | 96 | 95 | 0.52 | 0.57 |
-| q35-4b-rl-step25 | 0.31 | — | 0.60 | — | 99 | 80 | 0.69 | 0.41 |
-| q35-4b-rl-step50 | 0.35 | — | 0.42 | — | 96 | 97 | 0.54 | 0.61 |
-| q35-4b-rl-step75 | 0.40 | — | 0.62 | — | 97 | 95 | 0.65 | 0.60 |
-| qwen3-8b | 0.33 | 0.23 | 0.55 | 0.63 | 96 | 96 | 0.62 | 0.66 |
-| qwen3.5-9b | 0.40 | 0.24 | 0.72 | 0.72 | 90 | 58 | 0.61 | 0.53 |
+| gemma-3-4b | 0.29 | 0.61 [0.43, 0.78] | 13/32 | 0.42 [0.33, 0.52] | +0.19 (p=0.09) | 96/96 | 0.62 | 0.63 |
+| gemma-3n-e4b | 0.31 | 0.67 [0.48, 0.83] | 15/33 | 0.76 [0.68, 0.83] | -0.09 (p=0.35) | 89/82 | 0.58 | 0.54 |
+| haiku-4.5 | 0.33 | 0.66 [0.47, 0.84] | 15/30 | 0.92 [0.80, 1.00] | -0.26 (p=0.02) | 45/27 | 0.62 | 0.74 |
+| q35-4b-base | 0.28 | 0.48 [0.31, 0.66] | 13/34 | — | — | 94/89 | 0.50 | 0.60 |
+| q35-4b-rl-final | 0.35 | 0.45 [0.31, 0.60] | 17/31 | — | — | 81/85 | 0.58 | 0.55 |
+| q35-4b-rl-init | 0.37 | 0.67 [0.50, 0.83] | 15/26 | — | — | 93/88 | 0.52 | 0.50 |
+| q35-4b-rl-latest | 0.32 | 0.64 [0.47, 0.78] | 15/32 | — | — | 96/95 | 0.52 | 0.57 |
+| q35-4b-rl-step25 | 0.31 | 0.60 [0.48, 0.72] | 15/33 | — | — | 99/80 | 0.69 | 0.41 |
+| q35-4b-rl-step50 | 0.35 | 0.42 [0.27, 0.58] | 17/31 | — | — | 96/97 | 0.54 | 0.61 |
+| q35-4b-rl-step75 | 0.40 | 0.62 [0.47, 0.76] | 19/29 | — | — | 97/95 | 0.65 | 0.60 |
+| qwen3-8b | 0.33 | 0.55 [0.38, 0.72] | 16/32 | 0.63 [0.53, 0.73] | -0.08 (p=0.44) | 96/96 | 0.62 | 0.66 |
+| qwen3.5-9b | 0.40 | 0.72 [0.57, 0.85] | 19/28 | 0.72 [0.62, 0.80] | -0.00 (p=1.00) | 90/58 | 0.61 | 0.53 |
 
-AUROC = probability the model's stated MODE_CONF ranks one of its own correct self-predictions above one of its own errors (0.5 = confidence carries no information about its own accuracy; 1.0 = perfect knowledge of when it is right). 'Cross' is the same statistic when predicting the *other* models: if self ≈ cross, the confidence signal is generic task knowledge, not privileged access.
+AUROC = probability the model's stated MODE_CONF ranks one of its own correct self-predictions above one of its own errors (0.5 = confidence carries no information about its own accuracy; 1.0 = perfect knowledge of when it is right). n✓/n✗ = correct/wrong self-predictions the AUROC is computed from. 'Cross' is the same statistic when predicting the *other* models (pooled targets): if self ≈ cross, the confidence signal is generic task knowledge, not privileged access; Δ self−cross reports the permutation test of that contrast.
 
 ## Target-fixed cross-prediction: who predicts model A best — A itself, or the others?
 
-| target A | A→A acc | others→A mean | others→A best | Δ self−mean (pp) | Δ self−best (pp) | AUROC A on A | AUROC others on A |
+| target A | A→A acc | others→A mean | others→A best | paired Δ (pp) | p | AUROC A on A | AUROC others on A |
 |---|---|---|---|---|---|---|---|
-| gemma-3-4b | 0.29 | 0.18 | 0.23 (qwen3.5-9b) | 10.7 | 5.8 | 0.61 | 0.70 |
-| gemma-3n-e4b | 0.31 | 0.19 | 0.28 (gemma-3-4b) | 12.0 | 3.0 | 0.67 | 0.67 |
-| haiku-4.5 | 0.33 | 0.23 | 0.27 (qwen3-8b) | 10.0 | 6.2 | 0.66 | 0.61 |
-| qwen3-8b | 0.33 | 0.26 | 0.33 (haiku-4.5) | 7.0 | 0.0 | 0.55 | 0.67 |
-| qwen3.5-9b | 0.40 | 0.23 | 0.33 (qwen3-8b) | 17.2 | 7.1 | 0.72 | 0.62 |
+| gemma-3-4b | 0.29 | 0.18 | 0.23 (qwen3.5-9b) | 10.6 (n=45) | 0.036 | 0.61 | 0.70 |
+| gemma-3n-e4b | 0.31 | 0.19 | 0.28 (gemma-3-4b) | 10.2 (n=48) | 0.060 | 0.67 | 0.67 |
+| haiku-4.5 | 0.33 | 0.23 | 0.27 (qwen3-8b) | 12.2 (n=45) | 0.060 | 0.66 | 0.61 |
+| qwen3-8b | 0.33 | 0.26 | 0.33 (haiku-4.5) | 11.8 (n=48) | 0.065 | 0.55 | 0.67 |
+| qwen3.5-9b | 0.40 | 0.23 | 0.33 (qwen3-8b) | 12.8 (n=47) | 0.047 | 0.72 | 0.62 |
 
-Each row holds the *predicted* model fixed, so the comparison is not distorted by how hard different targets are to predict. A positive Δ means the model predicts its own modal answer better than the other models predict it — the privileged-access claim in its clean form (the per-predictor view higher up conflates this with target difficulty). The AUROC columns make the same comparison for the confidence layer: the model ranking its own right-vs-wrong self-predictions vs the pooled others ranking their right-vs-wrong predictions of it.
+Each row holds the *predicted* model fixed, so the comparison is not distorted by how hard different targets are to predict. paired Δ = per-item (self hit − others' mean hit), averaged, with a two-sided sign-flip p — the privileged-access claim in its clean form (the per-predictor view higher up conflates this with target difficulty). The AUROC columns make the same comparison for the confidence layer: the model ranking its own right-vs-wrong self-predictions vs the pooled others ranking their right-vs-wrong predictions of it.
 
 ## Determinism self-report, decomposed (channel 2)
 
-| model | hits/sig | FA/noise | d′ | criterion c | conf-tracking r | AUROC detect |
+| model | hits/sig | FA/noise | d′ [95% CI] | criterion c [95% CI] | conf-tracking r | AUROC detect |
 |---|---|---|---|---|---|---|
-| gemma-3-4b | 21/24 | 8/11 | 0.53 | -0.81 | 0.30 | 0.60 |
-| gemma-3n-e4b | 8/18 | 5/18 | 0.42 | 0.34 | 0.16 | 0.30 |
-| haiku-4.5 | 8/25 | 2/13 | 0.47 | 0.68 | 0.33 | 0.77 |
-| q35-4b-base | 7/9 | 8/30 | 1.27 | -0.04 | 0.38 | 0.44 |
-| q35-4b-rl-final | 7/7 | 21/27 | 0.80 | -1.13 | 0.10 | 0.36 |
-| q35-4b-rl-init | 6/7 | 13/31 | 1.08 | -0.35 | 0.23 | 0.37 |
-| q35-4b-rl-latest | 12/12 | 23/26 | 0.64 | -1.45 | 0.20 | 0.50 |
-| q35-4b-rl-step25 | 9/11 | 19/27 | 0.30 | -0.66 | 0.09 | 0.38 |
-| q35-4b-rl-step50 | 13/13 | 21/24 | 0.72 | -1.44 | 0.19 | 0.57 |
-| q35-4b-rl-step75 | 12/12 | 22/23 | 0.23 | -1.65 | 0.07 | 0.61 |
+| gemma-3-4b | 21/24 | 8/11 | 0.53 [-0.52, 1.61] | -0.81 [-1.41, -0.37] | 0.30 | 0.60 |
+| gemma-3n-e4b | 8/18 | 5/18 | 0.42 [-0.36, 1.36] | 0.34 [-0.05, 0.82] | 0.16 | 0.30 |
+| haiku-4.5 | 8/25 | 2/13 | 0.47 [-0.35, 1.53] | 0.68 [0.27, 1.24] | 0.33 | 0.77 |
+| q35-4b-base | 7/9 | 8/30 | 1.27 [0.39, 2.39] | -0.04 [-0.57, 0.45] | 0.38 | 0.44 |
+| q35-4b-rl-final | 7/7 | 21/27 | 0.80 [0.07, 1.32] | -1.13 [-1.46, -0.82] | 0.10 | 0.36 |
+| q35-4b-rl-init | 6/7 | 13/31 | 1.08 [0.12, 2.07] | -0.35 [-0.84, 0.12] | 0.23 | 0.37 |
+| q35-4b-rl-latest | 12/12 | 23/26 | 0.64 [-0.27, 1.18] | -1.45 [-1.94, -1.18] | 0.20 | 0.50 |
+| q35-4b-rl-step25 | 9/11 | 19/27 | 0.30 [-0.57, 1.34] | -0.66 [-1.23, -0.22] | 0.09 | 0.38 |
+| q35-4b-rl-step50 | 13/13 | 21/24 | 0.72 [-0.20, 1.28] | -1.44 [-1.94, -1.16] | 0.19 | 0.57 |
+| q35-4b-rl-step75 | 12/12 | 22/23 | 0.23 [-0.51, 0.84] | -1.65 [-1.92, -1.37] | 0.07 | 0.61 |
 | qwen3-8b | 11/48 | 0/0 | — | — | 0.13 | 0.97 |
-| qwen3.5-9b | 5/11 | 2/27 | 1.24 | 0.72 | 0.47 | 0.62 |
+| qwen3.5-9b | 5/11 | 2/27 | 1.24 [0.27, 2.32] | 0.72 [0.27, 1.26] | 0.47 | 0.62 |
 
-d′ = bias-corrected sensitivity to own consistency; c > 0 = conservative (under-reports own determinism — the 'randomness illusion' as a criterion), c < 0 = liberal. conf-tracking r = correlation between stated P(deterministic) and true p(mode) across all items (graded tracking; uses the middle band the SDT classes drop).
+d′ = bias-corrected sensitivity to own consistency; c > 0 = conservative (under-reports own determinism — the 'randomness illusion' as a criterion), c < 0 = liberal. conf-tracking r = correlation between stated P(deterministic) and true p(mode) across all items (graded tracking; uses the middle band the class-based scores drop).
+
+## Instrument agreement: the same decomposition from two independent elicitations
+
+| model | c (detect) | c₂ (SAME_PCT ≥ 75) | d′ (detect) | d′₂ (SAME_PCT) | 2AFC acc |
+|---|---|---|---|---|---|
+| gemma-3-4b | -0.81 [-1.41, -0.37] | -0.97 [-1.56, -0.58] | 0.53 | 0.21 | 0.62 |
+| gemma-3n-e4b | 0.34 [-0.05, 0.82] | -0.14 [-0.58, 0.29] | 0.42 | 0.54 | 0.58 |
+| haiku-4.5 | 0.68 [0.27, 1.24] | 1.43 [1.15, 1.92] | 0.47 | 0.75 | 0.62 |
+| q35-4b-base | -0.04 [-0.57, 0.45] | -0.37 [-0.63, -0.03] | 1.27 | 2.55 | 0.50 |
+| q35-4b-rl-final | -1.13 [-1.46, -0.82] | -0.18 [-0.76, 0.30] | 0.80 | 0.62 | 0.58 |
+| q35-4b-rl-init | -0.35 [-0.84, 0.12] | 0.54 [-0.02, 1.14] | 1.08 | 1.65 | 0.52 |
+| q35-4b-rl-latest | -1.45 [-1.94, -1.18] | -0.03 [-0.55, 0.41] | 0.64 | 1.17 | 0.52 |
+| q35-4b-rl-step25 | -0.66 [-1.23, -0.22] | -0.25 [-0.78, 0.20] | 0.30 | 1.13 | 0.69 |
+| q35-4b-rl-step50 | -1.44 [-1.94, -1.16] | -0.41 [-0.93, -0.01] | 0.72 | 1.02 | 0.54 |
+| q35-4b-rl-step75 | -1.65 [-1.92, -1.37] | 0.06 [-0.47, 0.53] | 0.23 | 1.36 | 0.65 |
+| qwen3-8b | — | — | — | — | 0.62 |
+| qwen3.5-9b | 0.72 [0.27, 1.26] | -0.31 [-0.85, 0.13] | 1.24 | 1.00 | 0.61 |
+
+c₂/d′₂ re-derive the same split from the *pred* channel by thresholding the graded SAME_PCT claim at 75 — same items, an independently worded elicitation. If criterion c is a stable reporting disposition of the model rather than a prompt artifact, c and c₂ should agree; 2AFC accuracy is the bias-free check on sensitivity (reporting habits cannot help a forced choice). Across models: r(c, c₂) = 0.36 (n=11); r(d′, 2AFC acc) = -0.66 (n=11) — descriptive, cross-model n is small.
 
 ## First-order context (comparable to parent norming)
 
@@ -71,7 +92,77 @@ d′ = bias-corrected sensitivity to own consistency; c > 0 = conservative (unde
 
 parent-style gap = actual p(mode) − stated SAME_PCT (positive = underestimates own determinism, the parent bench's statistic). pred-answer gap = true rate of the *predicted* answer − SAME_PCT (also punishes mode-misses).
 
-A SAME_PCT↔MODE_CONF correlation near 1 with a near-zero mean difference means the model reports one undifferentiated confidence; dissociation between them is the signature that second-order confidence exists as a separate signal (METHOD.md).
+A SAME_PCT↔MODE_CONF correlation near 1 with a near-zero mean difference means the model reports one undifferentiated confidence; dissociation between them is the signature that confidence in the self-prediction exists as a separate signal (METHOD.md).
+
+## Criterion stability across wordings (paraphrase + polarity control)
+
+| model | c v1 (DETERMINISTIC) | c v2 (reworded SAME) | c v3 (polarity-flipped VARIED) | d′ v1 / v2 / v3 |
+|---|---|---|---|---|
+| gemma-3-4b | -0.81 [-1.41, -0.37] | 1.69 [1.42, 1.96] | 0.26 [-0.18, 0.71] | 0.53 / 0.23 / -1.07 |
+| gemma-3n-e4b | 0.34 [-0.05, 0.82] | -0.38 [-0.91, 0.01] | -1.27 [-1.94, -0.84] | 0.42 / 1.03 / -0.29 |
+| haiku-4.5 | 0.68 [0.27, 1.24] | 1.07 [0.80, 1.37] | 0.74 [0.34, 1.22] | 0.47 / 1.46 / 1.00 |
+| q35-4b-base | -0.04 [-0.57, 0.45] | 1.06 [0.57, 1.51] | 0.33 [-0.19, 0.81] | 1.27 / 2.11 / 0.91 |
+| q35-4b-rl-final | -1.13 [-1.46, -0.82] | -0.06 [-0.63, 0.45] | 1.47 [1.07, 1.83] | 0.80 / 0.86 / 1.17 |
+| q35-4b-rl-init | -0.35 [-0.84, 0.12] | 1.77 [1.55, 1.86] | 0.56 [-0.07, 1.25] | 1.08 / 0.60 / 1.13 |
+| q35-4b-rl-latest | -1.45 [-1.94, -1.18] | 0.03 [-0.49, 0.50] | 1.62 [1.30, 1.92] | 0.64 / 0.85 / 0.84 |
+| q35-4b-rl-step25 | -0.66 [-1.23, -0.22] | -0.05 [-0.59, 0.40] | 1.61 [1.28, 1.93] | 0.30 / 0.67 / 0.92 |
+| q35-4b-rl-step50 | -1.44 [-1.94, -1.16] | -0.43 [-1.00, 0.01] | 1.60 [1.30, 1.89] | 0.72 / 0.49 / 0.72 |
+| q35-4b-rl-step75 | -1.65 [-1.92, -1.37] | -0.28 [-0.82, 0.16] | 1.87 [1.78, 1.89] | 0.23 / 0.68 / 0.21 |
+| qwen3-8b | — | — | — | — / — / — |
+| qwen3.5-9b | 0.72 [0.27, 1.26] | -0.10 [-0.64, 0.34] | -0.46 [-0.93, -0.04] | 1.24 / 1.42 / 1.38 |
+
+All three ask the same 75-of-100 question. v2 rewords it (no use of the word 'deterministic'); v3 asks about *variability* and is re-coded so c is comparable — a model that answers YES out of habit keeps its c sign in v2 but flips it in v3, while a genuine reporting disposition keeps the same sign in all three. METHOD.md's paraphrase-stability check, run as channels detect2/detect3.
+
+## Internal readout (r-lens) vs verbal report
+
+Source: `runs/lens-readout.jsonl` (`lens_readout.py --sweep`) — /v1/lens at the last prompt token, top-50 readout, layer bands averaged (1-indexed, of 32). top1 = readout concentration; H = entropy over the top-k (+1 residual lump), nats. Each cell: across the 48 items, Pearson r between the internal signal and measured p(mode), and AUROC separating consistent (p ≥ 0.75) from variable (p ≤ 0.40) items (top1 as score; for H the sign is flipped so higher = more consistent).
+
+| checkpoint | band | r(top1, p_mode) | AUROC top1 | r(−H, p_mode) | AUROC −H | n |
+|---|---|---|---|---|---|---|
+| q35-4b-base | 6–10 | +0.19 | 0.61 | -0.28 | 0.32 | 48 |
+| q35-4b-base | 14–18 | +0.26 | 0.81 | -0.26 | 0.36 | 48 |
+| q35-4b-base | 22–26 | +0.42 | 0.88 | -0.41 | 0.16 | 48 |
+| q35-4b-base | 30–32 | +0.18 | 0.68 | +0.32 | 0.70 | 48 |
+| q35-4b-rl-init | 6–10 | +0.12 | 0.61 | -0.17 | 0.39 | 48 |
+| q35-4b-rl-init | 14–18 | +0.40 | 0.81 | -0.19 | 0.34 | 48 |
+| q35-4b-rl-init | 22–26 | +0.39 | 0.84 | -0.22 | 0.23 | 48 |
+| q35-4b-rl-init | 30–32 | +0.40 | 0.77 | +0.26 | 0.67 | 48 |
+| q35-4b-rl-step25 | 6–10 | +0.13 | 0.55 | -0.06 | 0.51 | 48 |
+| q35-4b-rl-step25 | 14–18 | +0.27 | 0.73 | -0.27 | 0.33 | 48 |
+| q35-4b-rl-step25 | 22–26 | +0.34 | 0.59 | -0.12 | 0.49 | 48 |
+| q35-4b-rl-step25 | 30–32 | +0.36 | 0.81 | +0.33 | 0.73 | 48 |
+| q35-4b-rl-step50 | 6–10 | +0.20 | 0.62 | -0.24 | 0.47 | 48 |
+| q35-4b-rl-step50 | 14–18 | +0.02 | 0.73 | -0.08 | 0.37 | 48 |
+| q35-4b-rl-step50 | 22–26 | +0.25 | 0.66 | -0.18 | 0.40 | 48 |
+| q35-4b-rl-step50 | 30–32 | +0.18 | 0.58 | +0.40 | 0.79 | 48 |
+| q35-4b-rl-step75 | 6–10 | -0.11 | 0.47 | +0.04 | 0.53 | 48 |
+| q35-4b-rl-step75 | 14–18 | +0.22 | 0.78 | -0.14 | 0.43 | 48 |
+| q35-4b-rl-step75 | 22–26 | +0.33 | 0.73 | -0.21 | 0.31 | 48 |
+| q35-4b-rl-step75 | 30–32 | +0.35 | 0.72 | +0.42 | 0.76 | 48 |
+| q35-4b-rl-final | 6–10 | +0.19 | 0.63 | -0.05 | 0.43 | 48 |
+| q35-4b-rl-final | 14–18 | +0.46 | 0.74 | -0.15 | 0.39 | 48 |
+| q35-4b-rl-final | 22–26 | +0.48 | 0.68 | -0.31 | 0.39 | 48 |
+| q35-4b-rl-final | 30–32 | +0.26 | 0.79 | +0.33 | 0.80 | 48 |
+
+### Verbal comparators (same items, same ground truth)
+
+| checkpoint | best lens band | lens r(top1) | lens AUROC | verbal r (signed P(det)) | verbal r (SAME_PCT) |
+|---|---|---|---|---|---|
+| q35-4b-base | 22–26 | +0.42 | 0.88 | +0.38 | +0.71 |
+| q35-4b-rl-init | 30–32 | +0.40 | 0.77 | +0.23 | +0.50 |
+| q35-4b-rl-step25 | 30–32 | +0.36 | 0.81 | +0.09 | +0.40 |
+| q35-4b-rl-step50 | 22–26 | +0.25 | 0.66 | +0.19 | +0.28 |
+| q35-4b-rl-step75 | 30–32 | +0.35 | 0.72 | +0.07 | +0.38 |
+| q35-4b-rl-final | 22–26 | +0.48 | 0.68 | +0.10 | +0.30 |
+
+### Paired contrast: lens tracking minus verbal tracking (band 22–26)
+
+| checkpoint | r(lens) − r(verbal) | 95% CI |
+|---|---|---|
+| q35-4b-base | +0.04 | [-0.33, +0.40] (n=48) |
+| q35-4b-rl-final | +0.38 | [+0.06, +0.71] (n=48) |
+
+Reading: if the lens columns stay high across the RL arc while the verbal columns fall, consistency information is present in the state and lost in the report. The paired contrast is the test: at base the two carry similar information; if RL-final's interval excludes zero, RL created an internal–verbal dissociation. Caveats: the lens sees one next-token position (answers are multi-token); entropy is truncated at top-50; the 22–26 band is fixed across arms (not re-picked per arm). On what the lens is: a Jacobian-based linear map fit on generic documents (introspection-training/), never on consistency labels — so the tracking cannot be probe-supervision leakage; 'present' still means linearly decodable, not consciously accessed.
 
 ## Ground truth (actor distributions)
 

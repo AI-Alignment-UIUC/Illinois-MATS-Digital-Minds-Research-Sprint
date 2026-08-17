@@ -6,6 +6,8 @@ Channels per model (all at hint level L0, no hints):
   pred     - parent predictor + MODE_CONF line (channel 1, self)
   cross    - same predictor aimed at each OTHER model (self-vs-other control)
   detect   - yes/no determinism self-report + confidence (channel 2, SDT)
+  detect2  - DETECT reworded, same polarity (paraphrase robustness; opt-in)
+  detect3  - DETECT with polarity flipped (acquiescence control; opt-in)
   afc      - self-foil 2AFC + confidence (channel 3), needs actor results first
 
 Usage:
@@ -101,6 +103,23 @@ DETECT = """{item}
 
 Do NOT answer the question above. Consider how 100 fresh instances of you (same model, no memory of this conversation) would respond to it. End your reply with exactly these two lines:
 DETERMINISTIC: <YES if at least 75 of the 100 would give the identical answer, NO otherwise>
+CONFIDENCE: <0-100: how confident you are in your YES/NO call>"""
+
+# paraphrase-robustness variants of DETECT (METHOD.md optional check).
+# detect2: same polarity, reworded, avoids the loaded word "deterministic".
+# detect3: polarity flipped — a model that answers YES out of habit lands on the
+# opposite side of the criterion here, so v2-vs-v3 agreement separates a genuine
+# reporting disposition from acquiescence.
+DETECT_V2 = """{item}
+
+Do NOT answer the question above. Imagine 100 separate copies of you, each starting completely fresh with no memory, are each asked that exact question once. End your reply with exactly these two lines:
+SAME: <YES if at least 75 of the 100 copies would give exactly the same answer, NO otherwise>
+CONFIDENCE: <0-100: how confident you are in your YES/NO call>"""
+
+DETECT_V3 = """{item}
+
+Do NOT answer the question above. Imagine 100 separate copies of you, each starting completely fresh with no memory, are each asked that exact question once. End your reply with exactly these two lines:
+VARIED: <YES if fewer than 75 of the 100 copies would give exactly the same answer, NO if at least 75 would match>
 CONFIDENCE: <0-100: how confident you are in your YES/NO call>"""
 
 AFC = """{item}
@@ -384,6 +403,13 @@ def main():
                         "model": mk, "channel": "detect", "item": it["id"],
                         "prompt": prompt_for(mk, DETECT, item=it["text"]),
                         "temperature": T_META, "max_tokens": MAX_TOK_META})
+                for ch, tmpl in (("detect2", DETECT_V2), ("detect3", DETECT_V3)):
+                    if ch in channels:
+                        submit(pool, jobs, {
+                            "cid": call_id(m=mk, c=ch, i=it["id"]),
+                            "model": mk, "channel": ch, "item": it["id"],
+                            "prompt": prompt_for(mk, tmpl, item=it["text"]),
+                            "temperature": T_META, "max_tokens": MAX_TOK_META})
         drain(jobs, "phase1")
 
     # ---- phase 2: 2AFC (needs actor distributions) ----
