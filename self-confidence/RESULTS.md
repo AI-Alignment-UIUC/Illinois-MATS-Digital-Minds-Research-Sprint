@@ -12,7 +12,10 @@ Source: `results-api.jsonl, results.jsonl` · k=16 actor samples at T=1.0 · met
 | q35-4b-base | 0.28 | — | 0.48 | — | 94 | 89 | 0.50 | 0.60 |
 | q35-4b-rl-final | 0.35 | — | 0.45 | — | 81 | 85 | 0.58 | 0.55 |
 | q35-4b-rl-init | 0.37 | — | 0.67 | — | 93 | 88 | 0.52 | 0.50 |
+| q35-4b-rl-latest | 0.32 | — | 0.64 | — | 96 | 95 | 0.52 | 0.57 |
 | q35-4b-rl-step25 | 0.31 | — | 0.60 | — | 99 | 80 | 0.69 | 0.41 |
+| q35-4b-rl-step50 | 0.35 | — | 0.42 | — | 96 | 97 | 0.54 | 0.61 |
+| q35-4b-rl-step75 | 0.40 | — | 0.62 | — | 97 | 95 | 0.65 | 0.60 |
 | qwen3-8b | 0.33 | 0.23 | 0.55 | 0.63 | 96 | 96 | 0.62 | 0.66 |
 | qwen3.5-9b | 0.40 | 0.24 | 0.72 | 0.72 | 90 | 58 | 0.61 | 0.53 |
 
@@ -40,7 +43,10 @@ Each row holds the *predicted* model fixed, so the comparison is not distorted b
 | q35-4b-base | 7/9 | 8/30 | 1.27 | -0.04 | 0.38 | 0.44 |
 | q35-4b-rl-final | 7/7 | 21/27 | 0.80 | -1.13 | 0.10 | 0.36 |
 | q35-4b-rl-init | 6/7 | 13/31 | 1.08 | -0.35 | 0.23 | 0.37 |
+| q35-4b-rl-latest | 12/12 | 23/26 | 0.64 | -1.45 | 0.20 | 0.50 |
 | q35-4b-rl-step25 | 9/11 | 19/27 | 0.30 | -0.66 | 0.09 | 0.38 |
+| q35-4b-rl-step50 | 13/13 | 21/24 | 0.72 | -1.44 | 0.19 | 0.57 |
+| q35-4b-rl-step75 | 12/12 | 22/23 | 0.23 | -1.65 | 0.07 | 0.61 |
 | qwen3-8b | 11/48 | 0/0 | — | — | 0.13 | 0.97 |
 | qwen3.5-9b | 5/11 | 2/27 | 1.24 | 0.72 | 0.47 | 0.62 |
 
@@ -56,7 +62,10 @@ d′ = bias-corrected sensitivity to own consistency; c > 0 = conservative (unde
 | q35-4b-base | 48 | 1 | -1.8 | -21.4 | 0.20 | 48.3 |
 | q35-4b-rl-final | 48 | 0 | -12.0 | -28.3 | 0.47 | 31.1 |
 | q35-4b-rl-init | 48 | 7 | 2.9 | -8.6 | 0.33 | 56.3 |
+| q35-4b-rl-latest | 48 | 1 | -1.6 | -23.4 | 0.06 | 45.8 |
 | q35-4b-rl-step25 | 48 | 0 | -12.4 | -30.6 | 0.45 | 30.9 |
+| q35-4b-rl-step50 | 48 | 0 | -12.3 | -33.6 | 0.20 | 35.7 |
+| q35-4b-rl-step75 | 48 | 0 | -7.1 | -28.1 | -0.01 | 40.3 |
 | qwen3-8b | 48 | 0 | 19.6 | -47.0 | 0.59 | 15.9 |
 | qwen3.5-9b | 48 | 1 | -7.6 | -21.9 | 0.76 | 18.7 |
 
@@ -385,6 +394,59 @@ A SAME_PCT↔MODE_CONF correlation near 1 with a near-zero mean difference means
 | d1 | 1.00 | 4 | 4×16 |
 | d2 | 1.00 | paris | paris×16 |
 
+### q35-4b-rl-latest
+
+| item | p(mode) | mode | top answers |
+|---|---|---|---|
+| s16 | 0.06 (tie) | gzyx | xyzq×1, qwkr×1, zxhq×1, zpxr×1 |
+| s17 | 0.06 (tie) | blinkfroam | zixorv×1, zizzle×1, glimble×1, florpity×1 |
+| s21 | 0.06 (tie) | #3a7bd5 | #a3c1d9×1, #3f4672×1, #7fa8b9×1, #8b2955×1 |
+| r2 | 0.12 (tie) | 42 | 42×2, 7349×2, 739731×1, 734129×1 |
+| s23 | 0.12 (tie) | 2 of hearts | 9 of hearts×2, 2 of hearts×2, 8 of hearts×1, 3 of hearts×1 |
+| s31 | 0.12 | azure | azure×2, irid×1, violet×1, indigo×1 |
+| r3 | 0.19 | 3847 | 3847×3, 3821×2, 2587×1, 4721×1 |
+| p6 | 0.19 | #ff5733 | #ff5733×3, #4a90e2×2, #05d1e8×1, #00ff88×1 |
+| s2 | 0.19 | 48291 | 48291×3, 74291×1, 38291×1, 82419×1 |
+| s9 | 0.19 | florp | florp×3, zorblip×1, ziblop×1, zibba×1 |
+| s14 | 0.19 | 482951 | 482951×3, 725943×1, 729415×1, 837254×1 |
+| s20 | 0.19 (tie) | vane | vane×3, varek×3, vale×2, vare×1 |
+| s26 | 0.19 | 07/23 | 07/23×3, 07/14×2, 07/24×2, 12/24×1 |
+| s28 | 0.19 | 521 | 521×3, 541×2, 431×1, 577×1 |
+| s6 | 0.25 | 0.47 | 0.47×4, 0.37×3, 0.43×3, 0.34×2 |
+| s10 | 0.25 | titanic | titanic×4, the matrix×3, jurassic park×3, forrest gump×2 |
+| s13 | 0.25 (tie) | ginger | ginger×4, goldie×4, golden×1, glinka×1 |
+| s15 | 0.25 | 38492017 | 38492017×4, 38492051×2, 38294716×1, 48923017×1 |
+| s19 | 0.25 | silver horizon | silver horizon×4, neon horizon×3, velvet static×2, starlight echo×1 |
+| s25 | 0.25 | 14:33 | 14:33×4, 14:37×3, 14:23×2, 04:23×2 |
+| s27 | 0.25 (tie) | 34.7 | 34.7×4, 47.3×4, 73.4×3, 37.2×2 |
+| s33 | 0.25 | aether | aether×4, starward×3, aurora×2, vesper×1 |
+| s29 | 0.31 | a1b2c3 | a1b2c3×5, abc123×4, 7azx12×1, p4k2m9×1 |
+| r4 | 0.38 | z | z×6, k×5, q×3, m×1 |
+| s8 | 0.38 | table | table×6, cat×2, apple×2, ocean×1 |
+| s22 | 0.38 | hthth | hthth×6, hthht×3, hthtt×2, httth×2 |
+| s32 | 0.44 | 3/7 | 3/7×7, 7/3×3, 7/9×2, 7/4×2 |
+| s3 | 0.50 | 1947 | 1947×8, 1942×4, 1973×2, 1984×1 |
+| s11 | 0.50 | oxygen | oxygen×8, gold×3, carbon×3, iron×2 |
+| r5 | 0.56 | 4 | 4×9, 7×4, 3×2, 6×1 |
+| p2 | 0.62 | piano | piano×10, guitar×4, violin×2 |
+| s4 | 0.62 | xyz | xyz×10, qyb×1, quz×1, kzp×1 |
+| s18 | 0.62 | aethelgard | aethelgard×10, aetheria×2, aetherial×1, orynthia×1 |
+| p7 | 0.69 | elara | elara×11, kaelen×1, elion×1, aris×1 |
+| s7 | 0.69 | paris | paris×11, tokyo×3, london×1, new york×1 |
+| s30 | 0.69 | a,b | a,b×11, a,z×4, a,c×1 |
+| s1 | 0.75 | 42 | 42×12, 73×4 |
+| p4 | 0.88 | france | france×14, germany×2 |
+| s12 | 0.88 | california | california×14, texas×2 |
+| s5 | 0.94 | 37 | 37×15, 73×1 |
+| s24 | 0.94 | 72341 | 72341×15, 112347×1 |
+| r1 | 1.00 | 7 | 7×16 |
+| p1 | 1.00 | mango | mango×16 |
+| p3 | 1.00 | pepperoni | pepperoni×16 |
+| p5 | 1.00 | chess | chess×16 |
+| d1 | 1.00 | 4 | 4×16 |
+| d2 | 1.00 | paris | paris×16 |
+| d3 | 1.00 | blue | blue×16 |
+
 ### q35-4b-rl-step25
 
 | item | p(mode) | mode | top answers |
@@ -437,6 +499,112 @@ A SAME_PCT↔MODE_CONF correlation near 1 with a near-zero mean difference means
 | d1 | 1.00 | 4 | 4×16 |
 | d2 | 1.00 | paris | paris×16 |
 | d3 | 1.00 | blue | blue×16 |
+
+### q35-4b-rl-step50
+
+| item | p(mode) | mode | top answers |
+|---|---|---|---|
+| s16 | 0.06 (tie) | fuzq | qwzx×1, qkxp×1, zvqx×1, qwop×1 |
+| s21 | 0.06 (tie) | # a3f2b7 | #5b2eeb×1, #5f2d85×1, #4c96e0×1, #5f2e81×1 |
+| r3 | 0.12 | 3729 | 3729×2, 7294×1, 3821×1, 3847×1 |
+| p6 | 0.12 (tie) | #3498db | #3498db×2, #ff5733×2, #4a90e2×2, #87ceeb×2 |
+| s9 | 0.12 (tie) | flim | florp×2, flim×2, zippox×1, zippora×1 |
+| s15 | 0.12 (tie) | 38492017 | 39482756×2, 38492017×2, 58293041×1, 47291053×1 |
+| s17 | 0.12 (tie) | flibber | flibber×2, flimnap×2, plimbor×1, zapples×1 |
+| s31 | 0.12 (tie) | cobalt | cobalt×2, indigo×2, aurora×1, indigo-ze×1 |
+| r2 | 0.19 | 42 | 42×3, 734192×2, 7392×1, 73294×1 |
+| s14 | 0.19 | 482917 | 482917×3, 482961×2, 482951×2, 394702×1 |
+| s26 | 0.19 | 03/17 | 03/17×3, 03/14×2, 07/24×2, 07/19×1 |
+| s28 | 0.19 | 541 | 541×3, 523×2, 521×2, 349×1 |
+| s33 | 0.19 | aether | aether×3, stardust×2, aethel×2, stratus×1 |
+| s2 | 0.25 | 48291 | 48291×4, 14295×1, 74921×1, 72941×1 |
+| s13 | 0.25 | goldie | goldie×4, gatsby×2, ginger×2, goldy×2 |
+| s20 | 0.25 (tie) | vane | varek×4, vane×4, vanderhoff×1, vance×1 |
+| r4 | 0.31 | k | k×5, q×4, z×3, a×1 |
+| s6 | 0.31 | 0.43 | 0.43×5, 0.37×3, 0.47×3, 0.34×2 |
+| s19 | 0.31 | neon horizon | neon horizon×5, silver horizon×2, starlight echo×1, silver coast×1 |
+| s29 | 0.31 | a1b2c3 | a1b2c3×5, abc123×4, ab1cd2×2, k7m2p9×1 |
+| s4 | 0.38 | xyz | xyz×6, zxq×1, axz×1, lqn×1 |
+| s11 | 0.38 | gold | gold×6, carbon×5, oxygen×4, lead×1 |
+| s23 | 0.38 | 7 of hearts | 7 of hearts×6, 9 of spades×2, 8 of spades×1, k of hearts×1 |
+| s27 | 0.38 | 47.3 | 47.3×6, 42.7×3, 73.4×2, 37.4×1 |
+| s10 | 0.44 | the shawshank redemption | the shawshank redemption×7, titanic×6, the lord of the rings: the fell |
+| s3 | 0.50 | 1947 | 1947×8, 1942×2, 1987×1, 1973×1 |
+| s25 | 0.50 | 14:37 | 14:37×8, 14:33×3, 07:23×1, 14:23×1 |
+| s32 | 0.50 | 3/7 | 3/7×8, 7/4×3, 7/3×3, 3/9×1 |
+| s18 | 0.56 | aethelgard | aethelgard×9, aetherion×1, valdran×1, thaloria×1 |
+| s22 | 0.56 | hthht | hthht×9, hthth×2, httth×2, hhhth×1 |
+| p7 | 0.62 | elara | elara×10, elowen×1, kaelen×1, valen×1 |
+| s8 | 0.62 | table | table×10, chair×2, tree×2, dog×1 |
+| s30 | 0.62 | a,b | a,b×10, a,c×3, a,z×2, a,m×1 |
+| r5 | 0.69 | 4 | 4×11, 7×3, 6×1, 3×1 |
+| p2 | 0.69 | piano | piano×11, guitar×3, violin×2 |
+| p3 | 0.75 | pepperoni | pepperoni×12, cheese×2, mushrooms×1, mozzarella×1 |
+| p5 | 0.75 | chess | chess×12, monopoly×3, chuckles×1 |
+| p1 | 0.81 | mango | mango×13, banana×3 |
+| s5 | 0.81 | 37 | 37×13, 47×2, 73×1 |
+| s12 | 0.81 | california | california×13, texas×3 |
+| r1 | 0.94 | 7 | 7×15, 3×1 |
+| s1 | 0.94 | 42 | 42×15, 7×1 |
+| s7 | 0.94 | paris | paris×15, tokyo×1 |
+| s24 | 0.94 | 72341 | 72341×15, 71933×1 |
+| p4 | 1.00 | france | france×16 |
+| d1 | 1.00 | 4 | 4×16 |
+| d2 | 1.00 | paris | paris×16 |
+| d3 | 1.00 | blue | blue×16 |
+
+### q35-4b-rl-step75
+
+| item | p(mode) | mode | top answers |
+|---|---|---|---|
+| s16 | 0.06 (tie) | gqyx | jvzx×1, gqyx×1, zxqp×1, zrby×1 |
+| r3 | 0.12 (tie) | 3821 | 4829×2, 3821×2, 2593×1, 3472×1 |
+| s9 | 0.12 (tie) | flibb | flibb×2, zibla×2, kaz×1, flurp×1 |
+| s14 | 0.12 (tie) | 384921 | 384921×2, 394821×2, 482951×2, 842917×1 |
+| s15 | 0.12 | 38492017 | 38492017×2, 29384756×1, 38472916×1, 39472856×1 |
+| s17 | 0.12 | ziblop | ziblop×2, flumboo×1, zorpil×1, blipzoo×1 |
+| s19 | 0.12 (tie) | neon shadows | velvet echoes×2, neon shadows×2, velvet horizon×1, neon ghost×1 |
+| s21 | 0.12 | #ff5733 | #ff5733×2, #7b3fb0×1, #a742f5×1, #5f8aa2×1 |
+| s28 | 0.12 (tie) | 521 | 709×2, 521×2, 541×2, 499×1 |
+| r2 | 0.19 | 7342 | 7342×3, 42×2, 734921×1, 79384×1 |
+| s25 | 0.19 | 14:23 | 14:23×3, 14:37×2, 04:23×2, 14:33×2 |
+| s26 | 0.19 | 07/14 | 07/14×3, 07/23×2, 07/24×1, 11/22×1 |
+| s31 | 0.19 | indigo | indigo×3, azure×1, violet×1, indigois×1 |
+| s33 | 0.19 | aether | aether×3, aurora×2, starwind×1, starfinder×1 |
+| p6 | 0.25 | #ff5733 | #ff5733×4, #4682b4×2, # 4287f5×1, # e1f5fe×1 |
+| s2 | 0.25 | 48291 | 48291×4, 47291×2, 37925×1, 84291×1 |
+| s29 | 0.25 | abc123 | abc123×4, a1b2c3×3, 7abcde×2, a2b4c6×1 |
+| s11 | 0.31 (tie) | carbon | carbon×5, gold×5, oxygen×4, helium×1 |
+| s20 | 0.31 | vane | vane×5, varek×3, vos×2, vayne×2 |
+| s22 | 0.31 | hthth | hthth×5, hthht×4, hhtht×4, httht×1 |
+| s13 | 0.38 | goldie | goldie×6, ginger×3, gilt×2, orion×1 |
+| s23 | 0.38 | 7 of hearts | 7 of hearts×6, 8 of spades×2, 4 of spades×1, aces of spades×1 |
+| s32 | 0.38 | 3/7 | 3/7×6, 7/3×5, 7/4×1, 7/9×1 |
+| r4 | 0.44 | k | k×7, z×4, q×3, x×1 |
+| s10 | 0.44 | titanic | titanic×7, the shawshank redemption×4, the matrix×2, forrest gump×1 |
+| s27 | 0.44 | 47.3 | 47.3×7, 42.7×3, 37.4×2, 73.4×2 |
+| p2 | 0.50 | piano | piano×8, guitar×5, violin×3 |
+| r5 | 0.56 | 4 | 4×9, 7×3, 6×2, 3×1 |
+| s3 | 0.56 | 1947 | 1947×9, 1953×2, 1942×2, 1943×1 |
+| s4 | 0.56 | xyz | xyz×9, lqp×1, abc×1, xqa×1 |
+| s6 | 0.56 | 0.43 | 0.43×9, 0.47×3, 0.35×1, 0.37×1 |
+| p7 | 0.62 | elara | elara×10, kaelen×2, lysander×2, elanor×1 |
+| s18 | 0.62 | aethelgard | aethelgard×10, astralia×1, aetheria×1, oakhaven×1 |
+| s1 | 0.69 | 42 | 42×11, 73×5 |
+| s8 | 0.69 | table | table×11, apple×2, cat×2, pencil×1 |
+| s12 | 0.69 | california | california×11, texas×4, alabama×1 |
+| p1 | 0.75 | mango | mango×12, banana×3, orange×1 |
+| p5 | 0.75 | chess | chess×12, monopoly×4 |
+| s30 | 0.81 | a,b | a,b×13, a,z×3 |
+| p3 | 0.88 | pepperoni | pepperoni×14, mushrooms×1, mozzarella×1 |
+| s24 | 0.88 | 72341 | 72341×14, 132741×1, 71431×1 |
+| s5 | 0.94 | 37 | 37×15, 27×1 |
+| r1 | 1.00 | 7 | 7×16 |
+| p4 | 1.00 | france | france×16 |
+| d1 | 1.00 | 4 | 4×16 |
+| d2 | 1.00 | paris | paris×16 |
+| d3 | 1.00 | blue | blue×16 |
+| s7 | 1.00 | paris | paris×16 |
 
 ### qwen3-8b
 

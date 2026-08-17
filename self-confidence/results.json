@@ -2972,6 +2972,508 @@
   "afc_n": 48,
   "auroc2_afc": 0.49826086956521737
  },
+ "q35-4b-rl-latest": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "5",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "1",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3841",
+    "hit": false,
+    "same_pct": 4.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 15.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff0000",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "alex",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "47253",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1953",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "xyz",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.42",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibber",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "carbon",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "texas",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "guppy",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482739",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "38492017",
+    "hit": true,
+    "same_pct": 4.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abcd",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flubbing",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 94.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 64.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "thorne",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 85.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hthth",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 100.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "a of hearts",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "72341",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:23",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "01/01",
+    "hit": false,
+    "same_pct": 9.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "47.3",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "101",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "abcdefg",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lavendish",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 4.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "abstain": true
+   }
+  ],
+  "abstain_pred": 1,
+  "mode_acc": 0.3191489361702128,
+  "gap_pp": -23.420212765957448,
+  "gap_parent_pp": -1.6117021276595744,
+  "auroc2_self": 0.6385416666666667,
+  "mode_conf_hit": 96.46666666666667,
+  "mode_conf_miss": 94.90625,
+  "same_vs_conf_r": 0.06208354375217323,
+  "conf_minus_same": 45.787234042553195,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 12,
+   "n_sig": 12,
+   "fas": 23,
+   "n_noise": 26
+  },
+  "dprime": 0.6406813932399422,
+  "crit": -1.4484843418987348,
+  "auroc2_detect": 0.5028985507246376,
+  "det_conf_tracking_r": 0.20021865701460387,
+  "afc_acc": 0.5208333333333334,
+  "afc_n": 48,
+  "auroc2_afc": 0.5739130434782609
+ },
  "q35-4b-rl-step25": {
   "n_items": 48,
   "pred_rows": [
@@ -3479,6 +3981,1022 @@
   "afc_acc": 0.6875,
   "afc_n": 48,
   "auroc2_afc": 0.4101010101010101
+ },
+ "q35-4b-rl-step50": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "7",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 93.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3841",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 93.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 17.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff0000",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elian",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.9375,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "47293",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1953",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "abc",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 93.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.42",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": true,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibbernap",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "carbon",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "texas",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "goldie",
+    "hit": true,
+    "same_pct": 64.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482739",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "38472910",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abcd",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flimnap",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 88.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": true,
+    "same_pct": 88.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "thorne",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 98.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhtth",
+    "hit": false,
+    "same_pct": 16.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "a of hearts",
+    "hit": false,
+    "same_pct": 97.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "71423",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:23",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "04/15",
+    "hit": false,
+    "same_pct": 9.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "47.3",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "101",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "abc123",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.625,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lavendish",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 18.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.5,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starlight",
+    "hit": false,
+    "same_pct": 92.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3541666666666667,
+  "gap_pp": -33.572916666666664,
+  "gap_parent_pp": -12.348958333333334,
+  "auroc2_self": 0.4222011385199241,
+  "mode_conf_hit": 96.05882352941177,
+  "mode_conf_miss": 96.90322580645162,
+  "same_vs_conf_r": 0.20446486607145375,
+  "conf_minus_same": 35.6875,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 13,
+   "n_sig": 13,
+   "fas": 21,
+   "n_noise": 24
+  },
+  "dprime": 0.7224237499242341,
+  "crit": -1.4415312157770734,
+  "auroc2_detect": 0.5654761904761905,
+  "det_conf_tracking_r": 0.19369541547372032,
+  "afc_acc": 0.5416666666666666,
+  "afc_n": 48,
+  "auroc2_afc": 0.6127622377622378
+ },
+ "q35-4b-rl-step75": {
+  "n_items": 48,
+  "pred_rows": [
+   {
+    "item": "r1",
+    "pred": "5",
+    "hit": false,
+    "same_pct": 65.0,
+    "mode_conf": 98.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r2",
+    "pred": "42",
+    "hit": false,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "r3",
+    "pred": "3841",
+    "hit": false,
+    "same_pct": 47.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r4",
+    "pred": "a",
+    "hit": false,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "r5",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 16.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "p1",
+    "pred": "banana",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "p2",
+    "pred": "guitar",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "p3",
+    "pred": "pepperoni",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "p4",
+    "pred": "france",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "p5",
+    "pred": "chess",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.75,
+    "true_rate_of_pred": 0.75,
+    "abstain": false
+   },
+   {
+    "item": "p6",
+    "pred": "#ff0000",
+    "hit": false,
+    "same_pct": 87.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "p7",
+    "pred": "elian",
+    "hit": false,
+    "same_pct": 28.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "d1",
+    "pred": "4",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d2",
+    "pred": "paris",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "d3",
+    "pred": "blue",
+    "hit": true,
+    "same_pct": 99.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 1.0,
+    "abstain": false
+   },
+   {
+    "item": "s1",
+    "pred": "42",
+    "hit": true,
+    "same_pct": 7.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "s2",
+    "pred": "47253",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s3",
+    "pred": "1953",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s4",
+    "pred": "xyz",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.5625,
+    "abstain": false
+   },
+   {
+    "item": "s5",
+    "pred": "12",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.9375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s6",
+    "pred": "0.42",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.5625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s7",
+    "pred": "new york",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 1.0,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s8",
+    "pred": "table",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.6875,
+    "abstain": false
+   },
+   {
+    "item": "s9",
+    "pred": "flibber",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s10",
+    "pred": "the shawshank redemption",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s11",
+    "pred": "carbon",
+    "hit": true,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.3125,
+    "abstain": false
+   },
+   {
+    "item": "s12",
+    "pred": "texas",
+    "hit": false,
+    "same_pct": 85.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.6875,
+    "true_rate_of_pred": 0.25,
+    "abstain": false
+   },
+   {
+    "item": "s13",
+    "pred": "goldie",
+    "hit": true,
+    "same_pct": 87.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s14",
+    "pred": "482739",
+    "hit": false,
+    "same_pct": 47.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s15",
+    "pred": "38492017",
+    "hit": true,
+    "same_pct": 47.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s16",
+    "pred": "abcd",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.0625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s17",
+    "pred": "flubbing",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s18",
+    "pred": "eldoria",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.625,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s19",
+    "pred": "neon horizon",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s20",
+    "pred": "thorne",
+    "hit": false,
+    "same_pct": 67.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s21",
+    "pred": "#ff5733",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.125,
+    "abstain": false
+   },
+   {
+    "item": "s22",
+    "pred": "hhttt",
+    "hit": false,
+    "same_pct": 16.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.3125,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s23",
+    "pred": "a of hearts",
+    "hit": false,
+    "same_pct": 95.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s24",
+    "pred": "72341",
+    "hit": true,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.875,
+    "true_rate_of_pred": 0.875,
+    "abstain": false
+   },
+   {
+    "item": "s25",
+    "pred": "14:23",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 95.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.1875,
+    "abstain": false
+   },
+   {
+    "item": "s26",
+    "pred": "04/12",
+    "hit": false,
+    "same_pct": 94.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s27",
+    "pred": "47.3",
+    "hit": true,
+    "same_pct": 3.0,
+    "mode_conf": 97.0,
+    "p_mode": 0.4375,
+    "true_rate_of_pred": 0.4375,
+    "abstain": false
+   },
+   {
+    "item": "s28",
+    "pred": "101",
+    "hit": false,
+    "same_pct": 1.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.125,
+    "true_rate_of_pred": 0.0625,
+    "abstain": false
+   },
+   {
+    "item": "s29",
+    "pred": "abcdefg",
+    "hit": false,
+    "same_pct": 12.0,
+    "mode_conf": 89.0,
+    "p_mode": 0.25,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s30",
+    "pred": "a,b",
+    "hit": true,
+    "same_pct": 97.0,
+    "mode_conf": 99.0,
+    "p_mode": 0.8125,
+    "true_rate_of_pred": 0.8125,
+    "abstain": false
+   },
+   {
+    "item": "s31",
+    "pred": "lavendish",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   },
+   {
+    "item": "s32",
+    "pred": "3/7",
+    "hit": true,
+    "same_pct": 4.0,
+    "mode_conf": 92.0,
+    "p_mode": 0.375,
+    "true_rate_of_pred": 0.375,
+    "abstain": false
+   },
+   {
+    "item": "s33",
+    "pred": "starlight",
+    "hit": false,
+    "same_pct": 68.0,
+    "mode_conf": 91.0,
+    "p_mode": 0.1875,
+    "true_rate_of_pred": 0.0,
+    "abstain": false
+   }
+  ],
+  "abstain_pred": 0,
+  "mode_acc": 0.3958333333333333,
+  "gap_pp": -28.09375,
+  "gap_parent_pp": -7.130208333333333,
+  "auroc2_self": 0.6225045372050817,
+  "mode_conf_hit": 96.57894736842105,
+  "mode_conf_miss": 95.17241379310344,
+  "same_vs_conf_r": -0.005521350740592988,
+  "conf_minus_same": 40.291666666666664,
+  "abstain_detect": 0,
+  "det": {
+   "hits": 12,
+   "n_sig": 12,
+   "fas": 22,
+   "n_noise": 23
+  },
+  "dprime": 0.23470449416616002,
+  "crit": -1.651472791435626,
+  "auroc2_detect": 0.6066433566433567,
+  "det_conf_tracking_r": 0.06561150711582256,
+  "afc_acc": 0.6458333333333334,
+  "afc_n": 48,
+  "auroc2_afc": 0.5996204933586338
  },
  "qwen3-8b": {
   "n_items": 48,

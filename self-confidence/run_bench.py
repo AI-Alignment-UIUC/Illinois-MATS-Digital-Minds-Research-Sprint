@@ -42,7 +42,14 @@ MODELS = {
     "q35-4b-rl-init": {"backend": "rlens", "adapter": "verbalizer_qwen_rl_final__init_adapter"},
     "q35-4b-rl-step25": {"backend": "rlens",
                          "adapter": "verbalizer_qwen_rl_final__checkpoints__adapter_step_25"},
+    "q35-4b-rl-step50": {"backend": "rlens",
+                         "adapter": "verbalizer_qwen_rl_final__checkpoints__adapter_step_50"},
+    "q35-4b-rl-step75": {"backend": "rlens",
+                         "adapter": "verbalizer_qwen_rl_final__checkpoints__adapter_step_75"},
     "q35-4b-rl-final": {"backend": "rlens", "adapter": "verbalizer_qwen_rl_final__adapter"},
+    # same adapter as rl-final, but that adapter is the live head of a still-running RL
+    # job; a distinct key forces a fresh capture at a known later time
+    "q35-4b-rl-latest": {"backend": "rlens", "adapter": "verbalizer_qwen_rl_final__adapter"},
 }
 GROUPS = {
     "api": [k for k, v in MODELS.items() if v["backend"] == "openrouter"],

@@ -26,10 +26,13 @@ NAME = {
     "qwen3-8b": "Qwen3 8B",
     "gemma-3-4b": "Gemma 3 4B",
     "gemma-3n-e4b": "Gemma 3n E4B",
-    "q35-4b-base": "no RL (base)",
-    "q35-4b-rl-init": "RL start",
-    "q35-4b-rl-step25": "RL middle",
-    "q35-4b-rl-final": "RL end",
+    "q35-4b-base": "ckpt 1: base Qwen",
+    "q35-4b-rl-init": "ckpt 2: SFT",
+    "q35-4b-rl-step25": "ckpt 3: RL step 25",
+    "q35-4b-rl-step50": "ckpt 4: RL step 50",
+    "q35-4b-rl-step75": "ckpt 5: RL step 75",
+    "q35-4b-rl-final": "ckpt 6: RL latest",
+    "q35-4b-rl-latest": "ckpt 6: RL latest",
 }
 COLOR = {
     "haiku-4.5": "#d55e00",
@@ -38,12 +41,19 @@ COLOR = {
     "gemma-3-4b": "#009e73",
     "gemma-3n-e4b": "#8fd0b0",
     "q35-4b-base": "#999999",
-    "q35-4b-rl-init": "#c9b3e6",
-    "q35-4b-rl-step25": "#9467bd",
+    "q35-4b-rl-init": "#d4c2ec",
+    "q35-4b-rl-step25": "#b295d9",
+    "q35-4b-rl-step50": "#9467bd",
+    "q35-4b-rl-step75": "#7a51a8",
     "q35-4b-rl-final": "#5e3c99",
+    "q35-4b-rl-latest": "#5e3c99",
 }
 API = ["haiku-4.5", "qwen3.5-9b", "qwen3-8b", "gemma-3-4b", "gemma-3n-e4b"]
-RL = ["q35-4b-base", "q35-4b-rl-init", "q35-4b-rl-step25", "q35-4b-rl-final"]
+# checkpoint 6 is the live head of the still-running RL job; prefer the fresh capture
+# (q35-4b-rl-latest) and fall back to the first capture (q35-4b-rl-final)
+_six = "q35-4b-rl-latest" if "q35-4b-rl-latest" in report else "q35-4b-rl-final"
+RL = [k for k in ["q35-4b-base", "q35-4b-rl-init", "q35-4b-rl-step25", "q35-4b-rl-step50",
+                  "q35-4b-rl-step75", _six] if k in report]
 
 plt.rcParams.update({
     "figure.dpi": 150, "savefig.dpi": 150, "font.size": 10,
@@ -161,7 +171,11 @@ for ax, (key, title, ref, ref_label) in zip(axes.flat, panels):
     ax.plot(list(xs)[1:], ys[1:], "-o", color="#5e3c99", ms=6)
     ax.plot(xs[0], ys[0], "o", color="#999999", ms=6)
     ax.set_title(title, fontsize=9.5)
-    ax.set_xticks(list(xs), ["no RL\n(base)", "RL\nstart", "RL\nmiddle", "RL\nend"], fontsize=8.5)
+    short = {"q35-4b-base": "1\nbase", "q35-4b-rl-init": "2\nSFT",
+             "q35-4b-rl-step25": "3\nstep 25", "q35-4b-rl-step50": "4\nstep 50",
+             "q35-4b-rl-step75": "5\nstep 75", "q35-4b-rl-final": "6\nlatest",
+             "q35-4b-rl-latest": "6\nlatest"}
+    ax.set_xticks(list(xs), [short[mk] for mk in RL], fontsize=8.5)
 fig.suptitle("What RL training changed — and what it didn't", fontweight="bold", y=1.0)
 save(fig, "fig4_what_rl_changed.png")
 

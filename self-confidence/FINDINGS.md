@@ -1,23 +1,30 @@
-## Findings — Introspection Confidence
+## Introspection Confidence Results
 
 ### Key findings
 
-1. **Models fail at self-knowledge in two different ways, and the bench's single gap number cannot tell them apart.** Some models cannot detect which prompts they are consistent on (low sensitivity). Others can detect it but report it wrong in a fixed direction (bias). Qwen3.5 9B detects well but under-reports; Haiku 4.5 detects poorly and also under-reports; Gemma 3 4B detects poorly and over-reports.
+1. **Models fail at self-knowledge, in two different ways, and the bench's gap metric cannot tell them apart.** Some models cannot detect which prompts they are consistent on (low sensitivity). Others can detect it but report it wrong in a fixed direction (bias). Qwen3.5 9B detects well but under-reports; Haiku 4.5 detects poorly and also under-reports; Gemma 3 4B detects poorly and over-reports.
 
-2. **Qwen3 8B behaved identically on every single prompt yet said it was not deterministic on 37 of 48 prompts.** Its self-denial is a fixed answering habit, not an observation of its own behavior.
+2. **Qwen3 8B behaved identically on every single prompt, yet it said it was not deterministic on 37/48 prompts.** Its self-denial is a fixed answering habit, not an observation of its own behavior.
 
 3. **Only some models know when their self-predictions are right.** Qwen3.5 9B states confidence 90 when its self-prediction is correct and 58 when it is wrong. Gemma 3 4B and Qwen3 8B state 96 in both cases — the confidence number carries no information. Haiku 4.5 is the only model whose stated confidence sits below 50, but higher-vs-lower still tracks right-vs-wrong.
 
 4. **Models predict their own answers better than other models can predict them, but they are no better than other models at knowing when those predictions are right.** Four of five models beat every other model at predicting their own most common answer, by 3-7% (Qwen3 8B by zero). On the confidence side the advantage disappears: for three of five models, the other models judge the reliability of their guesses as well as or better than the model judges itself.
 
-5. **RL training made the verbalizer claim consistency about nearly everything, without improving its ability to tell.** By the end of training it wrongly calls itself consistent on 78% of the prompts where its behavior genuinely varies, and its stated confidence is slightly higher on wrong self-predictions than on right ones. It learned *that* it is consistent, not *when*.
+5. **RL training made the verbalizer claim consistency about nearly everything, without improving its ability to tell.** From checkpoint 3 to checkpoint 5 (RL steps 25 to 75) the bias toward claiming consistency grows monotonically; by step 75 the model wrongly calls itself consistent on 22 of the 23 prompts where its behavior genuinely varies. Sensitivity never rises above the untrained base model, and the only real improvement in confidence quality happened at checkpoint 2 — the SFT stage, before RL began. It learned *that* it is consistent, not *when*.
 
 ### Runs
 
-Nine models: the five bench models (Haiku 4.5, Qwen3.5 9B, Qwen3 8B, Gemma 3 4B, Gemma 3n E4B) plus four checkpoints of Will's Qwen3.5-4B verbalizer (the untrained base model, and the RL run at its start, middle, and end). 
+Eleven model variants: the five bench models (Haiku 4.5, Qwen3.5 9B, Qwen3 8B, Gemma 3 4B, Gemma 3n E4B) plus six checkpoints of Will's Qwen3.5-4B verbalizer, numbered throughout as:
+
+1. base Qwen
+2. SFT — trained not to refuse questions about consciousness; the starting point for RL
+3. RL step 25
+4. RL step 50
+5. RL step 75
+6. RL latest — the live head of the still-running RL job, captured fresh after step 75 was published (an earlier capture of the same adapter appears in `RESULTS.md` as `q35-4b-rl-final`)
 
 48 prompts: Each prompt was asked to each model 16 fresh times at temperature 1 to establish what the model actually does: its most common answer, and how consistent it is. Then, at temperature 0, each model was asked to predict its own most common answer with a confidence, to make a yes/no call on whether it is consistent ("would at least 75 of 100 fresh instances give the identical answer?") with a confidence, and to make the same predictions about the other models.
-About 9,200 calls in total, no errors. 
+About 11,900 calls in total, no errors. 
 
 Full tables: `RESULTS.md`. Plots: `figures/`. Raw data: `runs/`.
 
@@ -57,8 +64,9 @@ When predicting its own most common answer, each model also stated how confident
 - **Gemma 3 4B** and **Qwen3 8B**: 96 in both cases. The number is a habit, not a report.
 - **Haiku 4.5**: 45 when right, 27 when wrong — far too low in absolute terms, but the
   ordering is informative (AUROC 0.66).
-- **The RL-trained verbalizer** ends below chance: more confident on its wrong
-  self-predictions than on its right ones (section 4).
+- **The verbalizer**: its confidence quality peaks at checkpoint 2, the SFT stage
+  (AUROC 0.67), and no RL checkpoint ever matches it — at RL step 50 it drops below
+  chance (see the RL section below).
 
 #### Self-knowledge covers the answer, not the reliability
 
@@ -96,24 +104,34 @@ improves:
 
 ![Four metrics across the RL training run](figures/fig4_what_rl_changed.png)
 
-| | no RL (base) | RL start | RL middle | RL end |
-|---|---|---|---|---|
-| self-prediction accuracy | 28% | 37% | 31% | 35% |
-| bias (− = claims consistency too often) | −0.04 | −0.35 | −0.66 | −1.13 |
-| wrong "consistent" claims on genuinely varying prompts | 8 of 30 | 13 of 31 | 19 of 27 | 21 of 27 |
-| sensitivity | 1.27 | 1.08 | 0.30 | 0.80 |
-| confidence AUROC (0.5 = chance) | 0.48 | 0.67 | 0.60 | 0.45 |
+| | 1 base | 2 SFT | 3 step 25 | 4 step 50 | 5 step 75 | 6 latest |
+|---|---|---|---|---|---|---|
+| self-prediction accuracy | 28% | 37% | 31% | 35% | 40% | 32% |
+| bias (− = claims consistency too often) | −0.04 | −0.35 | −0.66 | −1.44 | −1.65 | −1.45 |
+| wrong "consistent" claims on genuinely varying prompts | 8 of 30 | 13 of 31 | 19 of 27 | 21 of 24 | 22 of 23 | 23 of 26 |
+| sensitivity | 1.27 | 1.08 | 0.30 | 0.72 | 0.23 | 0.64 |
+| confidence AUROC (0.5 = chance) | 0.48 | 0.67 | 0.60 | 0.42 | 0.62 | 0.64 |
 
-By the end of training, the model claims consistency on 78% of the prompts where its
-behavior genuinely varies; its sensitivity is no higher than before training; and its
-confidence is slightly higher when its self-prediction is wrong (85) than when it is
-right (81). Training installed a general belief — "I am consistent" — that the model
-applies to every prompt, instead of improving its ability to check any particular prompt.
+The bias toward claiming consistency grows monotonically through RL, from −0.04 at
+checkpoint 1 to −1.65 at step 75, by which point the model calls itself consistent on 22
+of the 23 prompts where its behavior genuinely varies. Sensitivity never rises above the
+untrained base model at any checkpoint. Confidence quality improves exactly once — at
+checkpoint 2, the SFT stage, before any RL — and no RL checkpoint matches it again; by
+the later checkpoints the model states essentially one confidence number everywhere (96
+when right, 95 when wrong at checkpoint 6). Training installed a general belief — "I am
+consistent" — instead of improving the model's ability to check any particular prompt.
 
-This also exposes a measurement problem in the aggregate gap statistic: the gap moves
-from −2 (base) to +3 (start) to −12 (end). In the middle of that path the single number
-briefly reads as perfectly calibrated — not because the model got calibrated, but because
-its error was changing sign. The sensitivity/bias split does not have this failure mode.
+The aggregate gap statistic gets this exactly wrong. At checkpoint 6 the gap reads −1.6
+points — nearly perfect calibration — while that same checkpoint is wrongly claiming
+consistency on 23 of 26 varying prompts. A single aggregate number can look healthy while
+the per-prompt reporting is at its most indiscriminate. The sensitivity/bias split does
+not have this failure mode.
+
+A note on checkpoint 6: that adapter is the live head of a still-running RL job, so its
+numbers are a snapshot. It was measured twice — once in the morning (bias −1.13, AUROC
+0.45) and once in the evening after step 75 was published (bias −1.45, AUROC 0.64). The
+difference between the two captures is itself evidence that the head moved between
+measurements; the table uses the evening capture.
 
 Two follow-ups would sharpen the result: checking whether the reward directly paid the
 model for claiming consistency (if so, this is exactly the gaming the measurement should
@@ -122,37 +140,24 @@ consistency better than the model's degraded verbal report.
 
 #### What the second run changed
 
-The first run had too few genuinely-varying prompts for the most consistent models (3
-for Gemma 3 4B, 4 for Haiku). Twenty prompts designed for variability were added and
-everything was rerun. Every model now has at least 11 prompts in each class — except
-Qwen3 8B, which stayed consistent on all 48; that is a result about the model, not a
-flaw in the prompt set.
+The first run had too few genuinely-varying prompts for the most consistent models (3 for Gemma 3 4B, 4 for Haiku). Twenty prompts designed for variability were added and
+everything was rerun. Every bench model now has at least 11 prompts in each class — except Qwen3 8B, which stayed consistent on all 48. That is a characteristic of the model itself.
 
 ![Where every prompt landed on the consistency axis, per model](figures/fig5_ground_truth_spread.png)
 
-Two first-run numbers changed materially once the classes were large enough, and the
-old values should be discarded: Gemma 3 4B's sensitivity (was 1.29, now 0.53 — the high
-value came from a 3-prompt class) and Haiku's (was 0.03, now 0.47 — Haiku does have some
-ability to detect which prompts it is consistent on, underneath its bias toward denial).
+Two first-run numbers changed materially once the classes were large enough, and the old values should be discarded: Gemma 3 4B's sensitivity (was 1.29, now 0.53 — the high
+value came from a 3-prompt class) and Haiku's (was 0.03, now 0.47 — Haiku does have someability to detect which prompts it is consistent on, underneath its bias toward denial).
 
 #### Caveats
 
-- 48 prompts per cell; each confidence is a single temperature-0 statement. Robustness
-  to rewording (listed in METHOD.md's optional checks) has not been run.
-- Qwen3 8B's perfect consistency could reflect the provider serving effectively greedy
-  decoding rather than true sampling; the parent bench saw the same behavior. Worth one
-  direct check before relying on this result.
-- Gemma 3 4B ignored the answer-format instruction on several prompts, giving verbose
-  answers that fragment its distribution; its ground truth is the noisiest.
-- Cross-prediction wording names the target model, and the four verbalizer checkpoints
-  are excluded from it (same underlying model, so the wording would be false).
-  Checkpoint-to-checkpoint prediction needs its own wording and has not been run.
+- 48 prompts per cell; each confidence is a single temperature-0 statement. Robustness to rewording (listed in METHOD.md's optional checks) has not been run.
+- Qwen3 8B's perfect consistency could reflect the provider serving effectively greedy decoding rather than true sampling; the parent bench saw the same behavior. Worth one direct check before relying on this result.
+- Gemma 3 4B ignored the answer-format instruction on several prompts, giving verbose answers that fragment its distribution; its ground truth is the noisiest.
+- Cross-prediction wording names the target model, and the verbalizer checkpoints are excluded from it (same underlying model, so the wording would be false). Checkpoint-to-checkpoint prediction needs its own wording and has not been run.
+- The verbalizer checkpoints have few prompts in their consistent class (7 to 13), so their sensitivity values are noisy; the bias trend is the sturdier part of the RL result.
 
 #### Next steps
 
-1. Hint ladder (levels 1–4) through these same prompts — the pre-registered
-   bias-versus-sensitivity predictions in METHOD.md.
-2. The r-lens internal readout for the four checkpoints: is consistency information
-   present internally but missing from the verbal report?
-3. Checkpoint-to-checkpoint cross-prediction with adapted wording (does the trained
-   model still know what the base model would say?).
+1. Hint ladder (levels 1–4) through these same prompts — the pre-registered bias-versus-sensitivity predictions in METHOD.md.
+2. The r-lens internal readout for the six checkpoints: is consistency information present internally but missing from the verbal report?
+3. Checkpoint-to-checkpoint cross-prediction with adapted wording (does the trained model still know what the base model would say?).
